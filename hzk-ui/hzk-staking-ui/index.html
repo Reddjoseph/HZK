@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hzk-staking-ui</title>
+
+    <!-- POLYFILLS: load buffer/process via dynamic import BEFORE app modules -->
+    <script type="module">
+      // top-level await is supported in module scripts; ensures polyfills load first
+      const bufferModule = await import('buffer');
+      // bufferModule may expose Buffer as named export or default depending on bundler,
+      // but in the browser build it should expose `Buffer` as a property.
+      const BufferImpl = bufferModule?.Buffer ?? bufferModule?.default?.Buffer ?? bufferModule?.default ?? bufferModule;
+      window.Buffer = window.Buffer || BufferImpl;
+      globalThis.Buffer = globalThis.Buffer || BufferImpl;
+
+      const procModule = await import('process/browser');
+      const proc = procModule?.default ?? procModule;
+      window.process = window.process || proc;
+      globalThis.process = globalThis.process || proc;
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- Vite entry - loads after we set globals above -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
