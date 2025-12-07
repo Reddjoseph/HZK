@@ -7,12 +7,11 @@ export default function Page() {
 
   return (
     <Hero
-      trustBadge={{ text: "Trusted by forward-thinking teams.", icons: ["✨"] }}
-      headline={{ line1: "Launch Your", line2: "Workflow Into Orbit" }}
-      subtitle="Supercharge productivity with AI-powered automation and integrations built for the next generation of teams — fast, seamless, and limitless."
+      trustBadge={{ text: "Powered by the Hanzenko Ecosystem" }}
+      headline={{ line1: "Stake, Earn,", line2: "and Grow Your HZK" }}
+      subtitle="Unlock the full potential of the Hanzenko Token with secure on-chain staking, real-time rewards, and seamless wallet integration built for the next generation of decentralized users — simple, fast, and reliable."
       buttons={{
-        primary: { text: "Get Started for Free", onClick: () => router.push("/dashboard") },
-        secondary: { text: "Explore Features", onClick: () => window.scrollTo({ top: window.innerHeight, behavior: "smooth" }) },
+        primary: { text: "Connect Wallet", onClick: () => router.push("/dashboard") },
       }}
     />
   );
