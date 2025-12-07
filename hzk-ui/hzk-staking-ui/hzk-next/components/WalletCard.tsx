@@ -1,14 +1,10 @@
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Wallet } from "lucide-react";
 import { useWallet } from "@solana/wallet-adapter-react";
-import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import AddressText from "@/components/AddressText";
 
 export default function WalletCard() {
   const { publicKey, connected } = useWallet();
-  const { setVisible } = useWalletModal();
 
   return (
     <Card className="shadow-md shadow-black/5">
@@ -17,17 +13,13 @@ export default function WalletCard() {
         <CardTitle>Wallet</CardTitle>
       </CardHeader>
       <CardContent className="pt-0">
-        {!connected ? (
-          <div className="flex items-center justify-center">
-            <Button className="w-full max-w-xs rounded-2xl" onClick={() => setVisible(true)}>
-              Connect wallet
-            </Button>
-          </div>
-        ) : (
-          <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center min-h-10">
+          {connected ? (
             <AddressText value={publicKey?.toString()} />
-          </div>
-        )}
+          ) : (
+            <span className="text-muted-foreground">—</span>
+          )}
+        </div>
       </CardContent>
     </Card>
   );

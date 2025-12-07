@@ -89,6 +89,215 @@ module.exports = require("next/dist/compiled/next-server/app-page.runtime.dev.js
 
 /***/ }),
 
+/***/ "assert":
+/*!*************************!*\
+  !*** external "assert" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("assert");
+
+/***/ }),
+
+/***/ "buffer":
+/*!*************************!*\
+  !*** external "buffer" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("buffer");
+
+/***/ }),
+
+/***/ "crypto":
+/*!*************************!*\
+  !*** external "crypto" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("crypto");
+
+/***/ }),
+
+/***/ "events":
+/*!*************************!*\
+  !*** external "events" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("events");
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ "http":
+/*!***********************!*\
+  !*** external "http" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("http");
+
+/***/ }),
+
+/***/ "https":
+/*!************************!*\
+  !*** external "https" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("https");
+
+/***/ }),
+
+/***/ "net":
+/*!**********************!*\
+  !*** external "net" ***!
+  \**********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("net");
+
+/***/ }),
+
+/***/ "node:crypto":
+/*!******************************!*\
+  !*** external "node:crypto" ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node:crypto");
+
+/***/ }),
+
+/***/ "node:url":
+/*!***************************!*\
+  !*** external "node:url" ***!
+  \***************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node:url");
+
+/***/ }),
+
+/***/ "os":
+/*!*********************!*\
+  !*** external "os" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("os");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");
+
+/***/ }),
+
+/***/ "process":
+/*!**************************!*\
+  !*** external "process" ***!
+  \**************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("process");
+
+/***/ }),
+
+/***/ "punycode":
+/*!***************************!*\
+  !*** external "punycode" ***!
+  \***************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("punycode");
+
+/***/ }),
+
+/***/ "stream":
+/*!*************************!*\
+  !*** external "stream" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ "tls":
+/*!**********************!*\
+  !*** external "tls" ***!
+  \**********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("tls");
+
+/***/ }),
+
+/***/ "url":
+/*!**********************!*\
+  !*** external "url" ***!
+  \**********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("url");
+
+/***/ }),
+
+/***/ "util":
+/*!***********************!*\
+  !*** external "util" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("util");
+
+/***/ }),
+
+/***/ "zlib":
+/*!***********************!*\
+  !*** external "zlib" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
+
+/***/ }),
+
 /***/ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fpage&page=%2Fpage&appPaths=%2Fpage&pagePath=private-next-app-dir%2Fpage.tsx&appDir=C%3A%5CUsers%5CBilly%20Joe%5COneDrive%5CDesktop%5CGithub%5CHZK%5Chzk-ui%5Chzk-staking-ui%5Chzk-next%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5CBilly%20Joe%5COneDrive%5CDesktop%5CGithub%5CHZK%5Chzk-ui%5Chzk-staking-ui%5Chzk-next&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!":
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fpage&page=%2Fpage&appPaths=%2Fpage&pagePath=private-next-app-dir%2Fpage.tsx&appDir=C%3A%5CUsers%5CBilly%20Joe%5COneDrive%5CDesktop%5CGithub%5CHZK%5Chzk-ui%5Chzk-staking-ui%5Chzk-next%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5CBilly%20Joe%5COneDrive%5CDesktop%5CGithub%5CHZK%5Chzk-ui%5Chzk-staking-ui%5Chzk-next&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! ***!
@@ -100,13 +309,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(ssr)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&server=true!":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&server=true! ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ "(ssr)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CBufferPolyfill.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CToaster.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CWalletProviders.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&server=true!":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CBufferPolyfill.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CToaster.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CWalletProviders.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&server=true! ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-
+eval("Promise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./components/BufferPolyfill.tsx */ \"(ssr)/./components/BufferPolyfill.tsx\"));\n;\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./components/Toaster.tsx */ \"(ssr)/./components/Toaster.tsx\"));\n;\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./components/WalletProviders.tsx */ \"(ssr)/./components/WalletProviders.tsx\"));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LWZsaWdodC1jbGllbnQtZW50cnktbG9hZGVyLmpzP21vZHVsZXM9JTdCJTIycmVxdWVzdCUyMiUzQSUyMkMlM0ElNUMlNUNVc2VycyU1QyU1Q0JpbGx5JTIwSm9lJTVDJTVDT25lRHJpdmUlNUMlNUNEZXNrdG9wJTVDJTVDR2l0aHViJTVDJTVDSFpLJTVDJTVDaHprLXVpJTVDJTVDaHprLXN0YWtpbmctdWklNUMlNUNoemstbmV4dCU1QyU1Q2FwcCU1QyU1Q2dsb2JhbHMuY3NzJTIyJTJDJTIyaWRzJTIyJTNBJTVCJTVEJTdEJm1vZHVsZXM9JTdCJTIycmVxdWVzdCUyMiUzQSUyMkMlM0ElNUMlNUNVc2VycyU1QyU1Q0JpbGx5JTIwSm9lJTVDJTVDT25lRHJpdmUlNUMlNUNEZXNrdG9wJTVDJTVDR2l0aHViJTVDJTVDSFpLJTVDJTVDaHprLXVpJTVDJTVDaHprLXN0YWtpbmctdWklNUMlNUNoemstbmV4dCU1QyU1Q2NvbXBvbmVudHMlNUMlNUNCdWZmZXJQb2x5ZmlsbC50c3glMjIlMkMlMjJpZHMlMjIlM0ElNUIlMjJkZWZhdWx0JTIyJTVEJTdEJm1vZHVsZXM9JTdCJTIycmVxdWVzdCUyMiUzQSUyMkMlM0ElNUMlNUNVc2VycyU1QyU1Q0JpbGx5JTIwSm9lJTVDJTVDT25lRHJpdmUlNUMlNUNEZXNrdG9wJTVDJTVDR2l0aHViJTVDJTVDSFpLJTVDJTVDaHprLXVpJTVDJTVDaHprLXN0YWtpbmctdWklNUMlNUNoemstbmV4dCU1QyU1Q2NvbXBvbmVudHMlNUMlNUNUb2FzdGVyLnRzeCUyMiUyQyUyMmlkcyUyMiUzQSU1QiUyMmRlZmF1bHQlMjIlNUQlN0QmbW9kdWxlcz0lN0IlMjJyZXF1ZXN0JTIyJTNBJTIyQyUzQSU1QyU1Q1VzZXJzJTVDJTVDQmlsbHklMjBKb2UlNUMlNUNPbmVEcml2ZSU1QyU1Q0Rlc2t0b3AlNUMlNUNHaXRodWIlNUMlNUNIWkslNUMlNUNoemstdWklNUMlNUNoemstc3Rha2luZy11aSU1QyU1Q2h6ay1uZXh0JTVDJTVDY29tcG9uZW50cyU1QyU1Q1dhbGxldFByb3ZpZGVycy50c3glMjIlMkMlMjJpZHMlMjIlM0ElNUIlMjJkZWZhdWx0JTIyJTVEJTdEJnNlcnZlcj10cnVlISIsIm1hcHBpbmdzIjoiQUFBQSwwS0FBd0w7QUFDeEw7QUFDQSw0SkFBaUw7QUFDakw7QUFDQSw0S0FBeUwiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9oemstc3Rha2luZy1uZXh0Lz81OWYwIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCgvKiB3ZWJwYWNrTW9kZTogXCJlYWdlclwiLCB3ZWJwYWNrRXhwb3J0czogW1wiZGVmYXVsdFwiXSAqLyBcIkM6XFxcXFVzZXJzXFxcXEJpbGx5IEpvZVxcXFxPbmVEcml2ZVxcXFxEZXNrdG9wXFxcXEdpdGh1YlxcXFxIWktcXFxcaHprLXVpXFxcXGh6ay1zdGFraW5nLXVpXFxcXGh6ay1uZXh0XFxcXGNvbXBvbmVudHNcXFxcQnVmZmVyUG9seWZpbGwudHN4XCIpO1xuO1xuaW1wb3J0KC8qIHdlYnBhY2tNb2RlOiBcImVhZ2VyXCIsIHdlYnBhY2tFeHBvcnRzOiBbXCJkZWZhdWx0XCJdICovIFwiQzpcXFxcVXNlcnNcXFxcQmlsbHkgSm9lXFxcXE9uZURyaXZlXFxcXERlc2t0b3BcXFxcR2l0aHViXFxcXEhaS1xcXFxoemstdWlcXFxcaHprLXN0YWtpbmctdWlcXFxcaHprLW5leHRcXFxcY29tcG9uZW50c1xcXFxUb2FzdGVyLnRzeFwiKTtcbjtcbmltcG9ydCgvKiB3ZWJwYWNrTW9kZTogXCJlYWdlclwiLCB3ZWJwYWNrRXhwb3J0czogW1wiZGVmYXVsdFwiXSAqLyBcIkM6XFxcXFVzZXJzXFxcXEJpbGx5IEpvZVxcXFxPbmVEcml2ZVxcXFxEZXNrdG9wXFxcXEdpdGh1YlxcXFxIWktcXFxcaHprLXVpXFxcXGh6ay1zdGFraW5nLXVpXFxcXGh6ay1uZXh0XFxcXGNvbXBvbmVudHNcXFxcV2FsbGV0UHJvdmlkZXJzLnRzeFwiKTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Capp%5C%5Cglobals.css%22%2C%22ids%22%3A%5B%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CBufferPolyfill.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CToaster.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CBilly%20Joe%5C%5COneDrive%5C%5CDesktop%5C%5CGithub%5C%5CHZK%5C%5Chzk-ui%5C%5Chzk-staking-ui%5C%5Chzk-next%5C%5Ccomponents%5C%5CWalletProviders.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&server=true!\n");
 
 /***/ }),
 
@@ -137,7 +346,40 @@ eval("Promise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__w
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_ui_animated_shader_hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/ui/animated-shader-hero */ \"(ssr)/./components/ui/animated-shader-hero.tsx\");\n/* harmony import */ var next_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/navigation */ \"(ssr)/./node_modules/next/dist/api/navigation.js\");\n/* __next_internal_client_entry_do_not_use__ default auto */ \n\n\nfunction Page() {\n    const router = (0,next_navigation__WEBPACK_IMPORTED_MODULE_2__.useRouter)();\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_ui_animated_shader_hero__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n        trustBadge: {\n            text: \"Powered by the Hanzenko Ecosystem\"\n        },\n        headline: {\n            line1: \"Stake, Earn,\",\n            line2: \"and Grow Your HZK\"\n        },\n        subtitle: \"Unlock the full potential of the Hanzenko Token with secure on-chain staking, real-time rewards, and seamless wallet integration built for the next generation of decentralized users — simple, fast, and reliable.\",\n        buttons: {\n            primary: {\n                text: \"Connect Wallet\",\n                onClick: ()=>router.push(\"/dashboard\")\n            }\n        }\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n        lineNumber: 9,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9hcHAvcGFnZS50c3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQ3dEO0FBQ1o7QUFFN0IsU0FBU0U7SUFDdEIsTUFBTUMsU0FBU0YsMERBQVNBO0lBRXhCLHFCQUNFLDhEQUFDRCwyRUFBSUE7UUFDSEksWUFBWTtZQUFFQyxNQUFNO1FBQW9DO1FBQ3hEQyxVQUFVO1lBQUVDLE9BQU87WUFBZ0JDLE9BQU87UUFBb0I7UUFDOURDLFVBQVM7UUFDVEMsU0FBUztZQUNQQyxTQUFTO2dCQUFFTixNQUFNO2dCQUFrQk8sU0FBUyxJQUFNVCxPQUFPVSxJQUFJLENBQUM7WUFBYztRQUM5RTs7Ozs7O0FBR04iLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9oemstc3Rha2luZy1uZXh0Ly4vYXBwL3BhZ2UudHN4Pzc2MDMiXSwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2UgY2xpZW50XCI7XHJcbmltcG9ydCBIZXJvIGZyb20gXCJAL2NvbXBvbmVudHMvdWkvYW5pbWF0ZWQtc2hhZGVyLWhlcm9cIjtcclxuaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSBcIm5leHQvbmF2aWdhdGlvblwiO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUGFnZSgpIHtcclxuICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKTtcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxIZXJvXHJcbiAgICAgIHRydXN0QmFkZ2U9e3sgdGV4dDogXCJQb3dlcmVkIGJ5IHRoZSBIYW56ZW5rbyBFY29zeXN0ZW1cIiB9fVxyXG4gICAgICBoZWFkbGluZT17eyBsaW5lMTogXCJTdGFrZSwgRWFybixcIiwgbGluZTI6IFwiYW5kIEdyb3cgWW91ciBIWktcIiB9fVxyXG4gICAgICBzdWJ0aXRsZT1cIlVubG9jayB0aGUgZnVsbCBwb3RlbnRpYWwgb2YgdGhlIEhhbnplbmtvIFRva2VuIHdpdGggc2VjdXJlIG9uLWNoYWluIHN0YWtpbmcsIHJlYWwtdGltZSByZXdhcmRzLCBhbmQgc2VhbWxlc3Mgd2FsbGV0IGludGVncmF0aW9uIGJ1aWx0IGZvciB0aGUgbmV4dCBnZW5lcmF0aW9uIG9mIGRlY2VudHJhbGl6ZWQgdXNlcnMg4oCUIHNpbXBsZSwgZmFzdCwgYW5kIHJlbGlhYmxlLlwiXHJcbiAgICAgIGJ1dHRvbnM9e3tcclxuICAgICAgICBwcmltYXJ5OiB7IHRleHQ6IFwiQ29ubmVjdCBXYWxsZXRcIiwgb25DbGljazogKCkgPT4gcm91dGVyLnB1c2goXCIvZGFzaGJvYXJkXCIpIH0sXHJcbiAgICAgIH19XHJcbiAgICAvPlxyXG4gICk7XHJcbn1cclxuIl0sIm5hbWVzIjpbIkhlcm8iLCJ1c2VSb3V0ZXIiLCJQYWdlIiwicm91dGVyIiwidHJ1c3RCYWRnZSIsInRleHQiLCJoZWFkbGluZSIsImxpbmUxIiwibGluZTIiLCJzdWJ0aXRsZSIsImJ1dHRvbnMiLCJwcmltYXJ5Iiwib25DbGljayIsInB1c2giXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./app/page.tsx\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_ui_animated_shader_hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/ui/animated-shader-hero */ \"(ssr)/./components/ui/animated-shader-hero.tsx\");\n/* harmony import */ var _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @solana/wallet-adapter-react */ \"(ssr)/./node_modules/@solana/wallet-adapter-react/lib/esm/useWallet.js\");\n/* harmony import */ var next_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/navigation */ \"(ssr)/./node_modules/next/dist/api/navigation.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* __next_internal_client_entry_do_not_use__ default auto */ \n\n\n\n\nfunction LandingContent() {\n    const { publicKey, connect, select } = (0,_solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_4__.useWallet)();\n    const router = (0,next_navigation__WEBPACK_IMPORTED_MODULE_2__.useRouter)();\n    const [isOpen, setIsOpen] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);\n    const [connecting, setConnecting] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);\n    const [error, setError] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(\"\");\n    const [localPubkey, setLocalPubkey] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(null);\n    function onConnectClick() {\n        setError(\"\");\n        setIsOpen(true);\n    }\n    async function handlePhantomConnect() {\n        setError(\"\");\n        const provider =  false ? 0 : null;\n        if (!provider || !provider.isPhantom) {\n            setError(\"Phantom wallet not found. Install it to continue.\");\n            return;\n        }\n        try {\n            setConnecting(true);\n            const resp = await provider.connect();\n            const keyStr = resp?.publicKey && resp.publicKey.toString && resp.publicKey.toString() || provider.publicKey && provider.publicKey.toString && provider.publicKey.toString() || \"\";\n            if (keyStr) setLocalPubkey(keyStr);\n            try {\n                // Ensure the app's wallet context is connected so the dashboard can read it\n                if (select) {\n                    // Name for Phantom adapter is \"Phantom\"\n                    select(\"Phantom\");\n                }\n                await connect();\n            } catch (_) {}\n            setIsOpen(false);\n            router.push(\"/dashboard\");\n        } catch (e) {\n            if (e?.code === 4001) {\n                setError(\"Connection request was rejected.\");\n            } else {\n                setError(\"Failed to connect. Try again.\");\n            }\n        } finally{\n            setConnecting(false);\n        }\n    }\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_ui_animated_shader_hero__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                trustBadge: {\n                    text: \"Powered by the Hanzenko Ecosystem\"\n                },\n                headline: {\n                    line1: \"Stake, Earn,\",\n                    line2: \"and Grow Your HZK\"\n                },\n                subtitle: \"Unlock the full potential of the Hanzenko Token with secure on-chain staking, real-time rewards, and seamless wallet integration built for the next generation of decentralized users — simple, fast, and reliable.\",\n                buttons: {\n                    primary: {\n                        text: \"Connect Wallet\",\n                        onClick: onConnectClick\n                    }\n                }\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                lineNumber: 58,\n                columnNumber: 7\n            }, this),\n            isOpen && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"w-full max-w-md rounded-2xl border border-white/10 bg-neutral-900/90 p-6 shadow-2xl\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h3\", {\n                            className: \"text-lg font-semibold text-white\",\n                            children: \"Connect a wallet on Solana to continue\"\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                            lineNumber: 70,\n                            columnNumber: 13\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"mt-5 space-y-3\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                    onClick: handlePhantomConnect,\n                                    disabled: connecting,\n                                    className: \"flex w-full items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3 text-left text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-70\",\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                            src: \"/phantom.svg\",\n                                            alt: \"Phantom\",\n                                            className: \"h-6 w-6\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                                            lineNumber: 77,\n                                            columnNumber: 17\n                                        }, this),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                            className: \"font-medium\",\n                                            children: \"Phantom\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                                            lineNumber: 78,\n                                            columnNumber: 17\n                                        }, this),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                            className: \"ml-auto text-sm text-white/70\",\n                                            children: connecting ? \"Connecting…\" : \"\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                                            lineNumber: 79,\n                                            columnNumber: 17\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                                    lineNumber: 72,\n                                    columnNumber: 15\n                                }, this),\n                                error && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                    className: \"text-sm text-red-400\",\n                                    children: error\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                                    lineNumber: 81,\n                                    columnNumber: 25\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                    className: \"text-xs text-white/60\",\n                                    children: [\n                                        \"Don't have Phantom? \",\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"a\", {\n                                            href: \"https://phantom.app/download\",\n                                            target: \"_blank\",\n                                            rel: \"noreferrer\",\n                                            className: \"text-indigo-300 hover:underline\",\n                                            children: \"Install it\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                                            lineNumber: 83,\n                                            columnNumber: 42\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                                    lineNumber: 82,\n                                    columnNumber: 15\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                            lineNumber: 71,\n                            columnNumber: 13\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"mt-6 flex justify-end\",\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                onClick: ()=>setIsOpen(false),\n                                className: \"rounded-md px-3 py-1.5 text-sm text-white/80 hover:text-white\",\n                                children: \"Cancel\"\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                                lineNumber: 87,\n                                columnNumber: 15\n                            }, this)\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                            lineNumber: 86,\n                            columnNumber: 13\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                    lineNumber: 69,\n                    columnNumber: 11\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n                lineNumber: 68,\n                columnNumber: 9\n            }, this)\n        ]\n    }, void 0, true);\n}\nfunction Page() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(LandingContent, {}, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\page.tsx\",\n        lineNumber: 98,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9hcHAvcGFnZS50c3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQ3dEO0FBQ0M7QUFDYjtBQUNYO0FBRWpDLFNBQVNJO0lBQ1AsTUFBTSxFQUFFQyxTQUFTLEVBQUVDLE9BQU8sRUFBRUMsTUFBTSxFQUFFLEdBQUdOLHVFQUFTQTtJQUNoRCxNQUFNTyxTQUFTTiwwREFBU0E7SUFDeEIsTUFBTSxDQUFDTyxRQUFRQyxVQUFVLEdBQUdQLCtDQUFRQSxDQUFDO0lBQ3JDLE1BQU0sQ0FBQ1EsWUFBWUMsY0FBYyxHQUFHVCwrQ0FBUUEsQ0FBQztJQUM3QyxNQUFNLENBQUNVLE9BQU9DLFNBQVMsR0FBR1gsK0NBQVFBLENBQUM7SUFDbkMsTUFBTSxDQUFDWSxhQUFhQyxlQUFlLEdBQUdiLCtDQUFRQSxDQUFnQjtJQUU5RCxTQUFTYztRQUNQSCxTQUFTO1FBQ1RKLFVBQVU7SUFDWjtJQUVBLGVBQWVRO1FBQ2JKLFNBQVM7UUFDVCxNQUFNSyxXQUFXLE1BQTZCLEdBQUcsQ0FBc0IsR0FBRztRQUMxRSxJQUFJLENBQUNBLFlBQVksQ0FBQ0EsU0FBU0csU0FBUyxFQUFFO1lBQ3BDUixTQUFTO1lBQ1Q7UUFDRjtRQUNBLElBQUk7WUFDRkYsY0FBYztZQUNkLE1BQU1XLE9BQU8sTUFBTUosU0FBU2IsT0FBTztZQUNuQyxNQUFNa0IsU0FDSixNQUFPbkIsYUFBYWtCLEtBQUtsQixTQUFTLENBQUNvQixRQUFRLElBQUlGLEtBQUtsQixTQUFTLENBQUNvQixRQUFRLE1BQ3JFTixTQUFTZCxTQUFTLElBQUljLFNBQVNkLFNBQVMsQ0FBQ29CLFFBQVEsSUFBSU4sU0FBU2QsU0FBUyxDQUFDb0IsUUFBUSxNQUNqRjtZQUNGLElBQUlELFFBQVFSLGVBQWVRO1lBQzNCLElBQUk7Z0JBQ0YsNEVBQTRFO2dCQUM1RSxJQUFJakIsUUFBUTtvQkFDVix3Q0FBd0M7b0JBQ3hDQSxPQUFPO2dCQUNUO2dCQUNBLE1BQU1EO1lBQ1IsRUFBRSxPQUFPb0IsR0FBRyxDQUFDO1lBQ2JoQixVQUFVO1lBQ1ZGLE9BQU9tQixJQUFJLENBQUM7UUFDZCxFQUFFLE9BQU9DLEdBQVE7WUFDZixJQUFJQSxHQUFHQyxTQUFTLE1BQU07Z0JBQ3BCZixTQUFTO1lBQ1gsT0FBTztnQkFDTEEsU0FBUztZQUNYO1FBQ0YsU0FBVTtZQUNSRixjQUFjO1FBQ2hCO0lBQ0Y7SUFFQSxxQkFDRTs7MEJBQ0UsOERBQUNaLDJFQUFJQTtnQkFDSDhCLFlBQVk7b0JBQUVDLE1BQU07Z0JBQW9DO2dCQUN4REMsVUFBVTtvQkFBRUMsT0FBTztvQkFBZ0JDLE9BQU87Z0JBQW9CO2dCQUM5REMsVUFBUztnQkFDVEMsU0FBUztvQkFDUEMsU0FBUzt3QkFBRU4sTUFBTTt3QkFBa0JPLFNBQVNyQjtvQkFBZTtnQkFDN0Q7Ozs7OztZQUdEUix3QkFDQyw4REFBQzhCO2dCQUFJQyxXQUFVOzBCQUNiLDRFQUFDRDtvQkFBSUMsV0FBVTs7c0NBQ2IsOERBQUNDOzRCQUFHRCxXQUFVO3NDQUFtQzs7Ozs7O3NDQUNqRCw4REFBQ0Q7NEJBQUlDLFdBQVU7OzhDQUNiLDhEQUFDRTtvQ0FDQ0osU0FBU3BCO29DQUNUeUIsVUFBVWhDO29DQUNWNkIsV0FBVTs7c0RBRVYsOERBQUNJOzRDQUFJQyxLQUFJOzRDQUFlQyxLQUFJOzRDQUFVTixXQUFVOzs7Ozs7c0RBQ2hELDhEQUFDTzs0Q0FBS1AsV0FBVTtzREFBYzs7Ozs7O3NEQUM5Qiw4REFBQ087NENBQUtQLFdBQVU7c0RBQWlDN0IsYUFBYSxnQkFBZ0I7Ozs7Ozs7Ozs7OztnQ0FFL0VFLHVCQUFTLDhEQUFDbUM7b0NBQUVSLFdBQVU7OENBQXdCM0I7Ozs7Ozs4Q0FDL0MsOERBQUNtQztvQ0FBRVIsV0FBVTs7d0NBQXdCO3NEQUNWLDhEQUFDUzs0Q0FBRUMsTUFBSzs0Q0FBK0JDLFFBQU87NENBQVNDLEtBQUk7NENBQWFaLFdBQVU7c0RBQWtDOzs7Ozs7Ozs7Ozs7Ozs7Ozs7c0NBR2pKLDhEQUFDRDs0QkFBSUMsV0FBVTtzQ0FDYiw0RUFBQ0U7Z0NBQU9KLFNBQVMsSUFBTTVCLFVBQVU7Z0NBQVE4QixXQUFVOzBDQUFnRTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBT2pJO0FBRWUsU0FBU2E7SUFDdEIscUJBQ0UsOERBQUNqRDs7Ozs7QUFFTCIsInNvdXJjZXMiOlsid2VicGFjazovL2h6ay1zdGFraW5nLW5leHQvLi9hcHAvcGFnZS50c3g/NzYwMyJdLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBjbGllbnRcIjtcclxuaW1wb3J0IEhlcm8gZnJvbSBcIkAvY29tcG9uZW50cy91aS9hbmltYXRlZC1zaGFkZXItaGVyb1wiO1xyXG5pbXBvcnQgeyB1c2VXYWxsZXQgfSBmcm9tIFwiQHNvbGFuYS93YWxsZXQtYWRhcHRlci1yZWFjdFwiO1xyXG5pbXBvcnQgeyB1c2VSb3V0ZXIgfSBmcm9tIFwibmV4dC9uYXZpZ2F0aW9uXCI7XHJcbmltcG9ydCB7IHVzZVN0YXRlIH0gZnJvbSBcInJlYWN0XCI7XHJcblxyXG5mdW5jdGlvbiBMYW5kaW5nQ29udGVudCgpIHtcclxuICBjb25zdCB7IHB1YmxpY0tleSwgY29ubmVjdCwgc2VsZWN0IH0gPSB1c2VXYWxsZXQoKTtcclxuICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKTtcclxuICBjb25zdCBbaXNPcGVuLCBzZXRJc09wZW5dID0gdXNlU3RhdGUoZmFsc2UpO1xyXG4gIGNvbnN0IFtjb25uZWN0aW5nLCBzZXRDb25uZWN0aW5nXSA9IHVzZVN0YXRlKGZhbHNlKTtcclxuICBjb25zdCBbZXJyb3IsIHNldEVycm9yXSA9IHVzZVN0YXRlKFwiXCIpO1xyXG4gIGNvbnN0IFtsb2NhbFB1YmtleSwgc2V0TG9jYWxQdWJrZXldID0gdXNlU3RhdGU8c3RyaW5nIHwgbnVsbD4obnVsbCk7XHJcblxyXG4gIGZ1bmN0aW9uIG9uQ29ubmVjdENsaWNrKCkge1xyXG4gICAgc2V0RXJyb3IoXCJcIik7XHJcbiAgICBzZXRJc09wZW4odHJ1ZSk7XHJcbiAgfVxyXG5cclxuICBhc3luYyBmdW5jdGlvbiBoYW5kbGVQaGFudG9tQ29ubmVjdCgpIHtcclxuICAgIHNldEVycm9yKFwiXCIpO1xyXG4gICAgY29uc3QgcHJvdmlkZXIgPSB0eXBlb2Ygd2luZG93ICE9PSBcInVuZGVmaW5lZFwiID8gKHdpbmRvdyBhcyBhbnkpLnNvbGFuYSA6IG51bGw7XHJcbiAgICBpZiAoIXByb3ZpZGVyIHx8ICFwcm92aWRlci5pc1BoYW50b20pIHtcclxuICAgICAgc2V0RXJyb3IoXCJQaGFudG9tIHdhbGxldCBub3QgZm91bmQuIEluc3RhbGwgaXQgdG8gY29udGludWUuXCIpO1xyXG4gICAgICByZXR1cm47XHJcbiAgICB9XHJcbiAgICB0cnkge1xyXG4gICAgICBzZXRDb25uZWN0aW5nKHRydWUpO1xyXG4gICAgICBjb25zdCByZXNwID0gYXdhaXQgcHJvdmlkZXIuY29ubmVjdCgpO1xyXG4gICAgICBjb25zdCBrZXlTdHIgPVxyXG4gICAgICAgIChyZXNwPy5wdWJsaWNLZXkgJiYgcmVzcC5wdWJsaWNLZXkudG9TdHJpbmcgJiYgcmVzcC5wdWJsaWNLZXkudG9TdHJpbmcoKSkgfHxcclxuICAgICAgICAocHJvdmlkZXIucHVibGljS2V5ICYmIHByb3ZpZGVyLnB1YmxpY0tleS50b1N0cmluZyAmJiBwcm92aWRlci5wdWJsaWNLZXkudG9TdHJpbmcoKSkgfHxcclxuICAgICAgICBcIlwiO1xyXG4gICAgICBpZiAoa2V5U3RyKSBzZXRMb2NhbFB1YmtleShrZXlTdHIpO1xyXG4gICAgICB0cnkge1xyXG4gICAgICAgIC8vIEVuc3VyZSB0aGUgYXBwJ3Mgd2FsbGV0IGNvbnRleHQgaXMgY29ubmVjdGVkIHNvIHRoZSBkYXNoYm9hcmQgY2FuIHJlYWQgaXRcclxuICAgICAgICBpZiAoc2VsZWN0KSB7XHJcbiAgICAgICAgICAvLyBOYW1lIGZvciBQaGFudG9tIGFkYXB0ZXIgaXMgXCJQaGFudG9tXCJcclxuICAgICAgICAgIHNlbGVjdChcIlBoYW50b21cIiBhcyBhbnkpO1xyXG4gICAgICAgIH1cclxuICAgICAgICBhd2FpdCBjb25uZWN0KCk7XHJcbiAgICAgIH0gY2F0Y2ggKF8pIHt9XHJcbiAgICAgIHNldElzT3BlbihmYWxzZSk7XHJcbiAgICAgIHJvdXRlci5wdXNoKFwiL2Rhc2hib2FyZFwiKTtcclxuICAgIH0gY2F0Y2ggKGU6IGFueSkge1xyXG4gICAgICBpZiAoZT8uY29kZSA9PT0gNDAwMSkge1xyXG4gICAgICAgIHNldEVycm9yKFwiQ29ubmVjdGlvbiByZXF1ZXN0IHdhcyByZWplY3RlZC5cIik7XHJcbiAgICAgIH0gZWxzZSB7XHJcbiAgICAgICAgc2V0RXJyb3IoXCJGYWlsZWQgdG8gY29ubmVjdC4gVHJ5IGFnYWluLlwiKTtcclxuICAgICAgfVxyXG4gICAgfSBmaW5hbGx5IHtcclxuICAgICAgc2V0Q29ubmVjdGluZyhmYWxzZSk7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPD5cclxuICAgICAgPEhlcm9cclxuICAgICAgICB0cnVzdEJhZGdlPXt7IHRleHQ6IFwiUG93ZXJlZCBieSB0aGUgSGFuemVua28gRWNvc3lzdGVtXCIgfX1cclxuICAgICAgICBoZWFkbGluZT17eyBsaW5lMTogXCJTdGFrZSwgRWFybixcIiwgbGluZTI6IFwiYW5kIEdyb3cgWW91ciBIWktcIiB9fVxyXG4gICAgICAgIHN1YnRpdGxlPVwiVW5sb2NrIHRoZSBmdWxsIHBvdGVudGlhbCBvZiB0aGUgSGFuemVua28gVG9rZW4gd2l0aCBzZWN1cmUgb24tY2hhaW4gc3Rha2luZywgcmVhbC10aW1lIHJld2FyZHMsIGFuZCBzZWFtbGVzcyB3YWxsZXQgaW50ZWdyYXRpb24gYnVpbHQgZm9yIHRoZSBuZXh0IGdlbmVyYXRpb24gb2YgZGVjZW50cmFsaXplZCB1c2VycyDigJQgc2ltcGxlLCBmYXN0LCBhbmQgcmVsaWFibGUuXCJcclxuICAgICAgICBidXR0b25zPXt7XHJcbiAgICAgICAgICBwcmltYXJ5OiB7IHRleHQ6IFwiQ29ubmVjdCBXYWxsZXRcIiwgb25DbGljazogb25Db25uZWN0Q2xpY2sgfSxcclxuICAgICAgICB9fVxyXG4gICAgICAvPlxyXG5cclxuICAgICAge2lzT3BlbiAmJiAoXHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmaXhlZCBpbnNldC0wIHotNTAgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgYmctYmxhY2svNjAgYmFja2Ryb3AtYmx1ci1zbVwiPlxyXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LWZ1bGwgbWF4LXctbWQgcm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCBiZy1uZXV0cmFsLTkwMC85MCBwLTYgc2hhZG93LTJ4bFwiPlxyXG4gICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXNlbWlib2xkIHRleHQtd2hpdGVcIj5Db25uZWN0IGEgd2FsbGV0IG9uIFNvbGFuYSB0byBjb250aW51ZTwvaDM+XHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXQtNSBzcGFjZS15LTNcIj5cclxuICAgICAgICAgICAgICA8YnV0dG9uXHJcbiAgICAgICAgICAgICAgICBvbkNsaWNrPXtoYW5kbGVQaGFudG9tQ29ubmVjdH1cclxuICAgICAgICAgICAgICAgIGRpc2FibGVkPXtjb25uZWN0aW5nfVxyXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiZmxleCB3LWZ1bGwgaXRlbXMtY2VudGVyIGdhcC0zIHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCBiZy13aGl0ZS81IHAtMyB0ZXh0LWxlZnQgdGV4dC13aGl0ZSB0cmFuc2l0aW9uIGhvdmVyOmJnLXdoaXRlLzEwIGRpc2FibGVkOmN1cnNvci1ub3QtYWxsb3dlZCBkaXNhYmxlZDpvcGFjaXR5LTcwXCJcclxuICAgICAgICAgICAgICA+XHJcbiAgICAgICAgICAgICAgICA8aW1nIHNyYz1cIi9waGFudG9tLnN2Z1wiIGFsdD1cIlBoYW50b21cIiBjbGFzc05hbWU9XCJoLTYgdy02XCIgLz5cclxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtbWVkaXVtXCI+UGhhbnRvbTwvc3Bhbj5cclxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cIm1sLWF1dG8gdGV4dC1zbSB0ZXh0LXdoaXRlLzcwXCI+e2Nvbm5lY3RpbmcgPyBcIkNvbm5lY3RpbmfigKZcIiA6IFwiXCJ9PC9zcGFuPlxyXG4gICAgICAgICAgICAgIDwvYnV0dG9uPlxyXG4gICAgICAgICAgICAgIHtlcnJvciAmJiA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNtIHRleHQtcmVkLTQwMFwiPntlcnJvcn08L3A+fVxyXG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC13aGl0ZS82MFwiPlxyXG4gICAgICAgICAgICAgICAgRG9uJmFwb3M7dCBoYXZlIFBoYW50b20/IDxhIGhyZWY9XCJodHRwczovL3BoYW50b20uYXBwL2Rvd25sb2FkXCIgdGFyZ2V0PVwiX2JsYW5rXCIgcmVsPVwibm9yZWZlcnJlclwiIGNsYXNzTmFtZT1cInRleHQtaW5kaWdvLTMwMCBob3Zlcjp1bmRlcmxpbmVcIj5JbnN0YWxsIGl0PC9hPlxyXG4gICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXQtNiBmbGV4IGp1c3RpZnktZW5kXCI+XHJcbiAgICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiBzZXRJc09wZW4oZmFsc2UpfSBjbGFzc05hbWU9XCJyb3VuZGVkLW1kIHB4LTMgcHktMS41IHRleHQtc20gdGV4dC13aGl0ZS84MCBob3Zlcjp0ZXh0LXdoaXRlXCI+Q2FuY2VsPC9idXR0b24+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICl9XHJcbiAgICA8Lz5cclxuICApO1xyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBQYWdlKCkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8TGFuZGluZ0NvbnRlbnQgLz5cclxuICApO1xyXG59XHJcbiJdLCJuYW1lcyI6WyJIZXJvIiwidXNlV2FsbGV0IiwidXNlUm91dGVyIiwidXNlU3RhdGUiLCJMYW5kaW5nQ29udGVudCIsInB1YmxpY0tleSIsImNvbm5lY3QiLCJzZWxlY3QiLCJyb3V0ZXIiLCJpc09wZW4iLCJzZXRJc09wZW4iLCJjb25uZWN0aW5nIiwic2V0Q29ubmVjdGluZyIsImVycm9yIiwic2V0RXJyb3IiLCJsb2NhbFB1YmtleSIsInNldExvY2FsUHVia2V5Iiwib25Db25uZWN0Q2xpY2siLCJoYW5kbGVQaGFudG9tQ29ubmVjdCIsInByb3ZpZGVyIiwid2luZG93Iiwic29sYW5hIiwiaXNQaGFudG9tIiwicmVzcCIsImtleVN0ciIsInRvU3RyaW5nIiwiXyIsInB1c2giLCJlIiwiY29kZSIsInRydXN0QmFkZ2UiLCJ0ZXh0IiwiaGVhZGxpbmUiLCJsaW5lMSIsImxpbmUyIiwic3VidGl0bGUiLCJidXR0b25zIiwicHJpbWFyeSIsIm9uQ2xpY2siLCJkaXYiLCJjbGFzc05hbWUiLCJoMyIsImJ1dHRvbiIsImRpc2FibGVkIiwiaW1nIiwic3JjIiwiYWx0Iiwic3BhbiIsInAiLCJhIiwiaHJlZiIsInRhcmdldCIsInJlbCIsIlBhZ2UiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./app/page.tsx\n");
+
+/***/ }),
+
+/***/ "(ssr)/./components/BufferPolyfill.tsx":
+/*!***************************************!*\
+  !*** ./components/BufferPolyfill.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ BufferPolyfill)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var buffer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! buffer */ \"buffer\");\n/* harmony import */ var buffer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(buffer__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var process__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! process */ \"process\");\n/* harmony import */ var process__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(process__WEBPACK_IMPORTED_MODULE_2__);\n/* __next_internal_client_entry_do_not_use__ default auto */ \n\n\nfunction BufferPolyfill() {\n    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{\n        if (false) {}\n    }, []);\n    return null;\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9jb21wb25lbnRzL0J1ZmZlclBvbHlmaWxsLnRzeCIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OzZEQUNrQztBQUNGO0FBQ0Y7QUFFZixTQUFTRztJQUN0QkgsZ0RBQVNBLENBQUM7UUFDUixJQUFJLEtBQTZCLEVBQUUsRUFLbEM7SUFDSCxHQUFHLEVBQUU7SUFDTCxPQUFPO0FBQ1QiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9oemstc3Rha2luZy1uZXh0Ly4vY29tcG9uZW50cy9CdWZmZXJQb2x5ZmlsbC50c3g/NWM1OCJdLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBjbGllbnRcIjtcclxuaW1wb3J0IHsgdXNlRWZmZWN0IH0gZnJvbSBcInJlYWN0XCI7XHJcbmltcG9ydCB7IEJ1ZmZlciB9IGZyb20gXCJidWZmZXJcIjtcclxuaW1wb3J0IHByb2Nlc3MgZnJvbSBcInByb2Nlc3NcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEJ1ZmZlclBvbHlmaWxsKCkge1xyXG4gIHVzZUVmZmVjdCgoKSA9PiB7XHJcbiAgICBpZiAodHlwZW9mIHdpbmRvdyAhPT0gXCJ1bmRlZmluZWRcIikge1xyXG4gICAgICAod2luZG93IGFzIGFueSkuQnVmZmVyID0gKHdpbmRvdyBhcyBhbnkpLkJ1ZmZlciB8fCBCdWZmZXI7XHJcbiAgICAgIChnbG9iYWxUaGlzIGFzIGFueSkuQnVmZmVyID0gKGdsb2JhbFRoaXMgYXMgYW55KS5CdWZmZXIgfHwgQnVmZmVyO1xyXG4gICAgICAod2luZG93IGFzIGFueSkucHJvY2VzcyA9ICh3aW5kb3cgYXMgYW55KS5wcm9jZXNzIHx8IHByb2Nlc3M7XHJcbiAgICAgIChnbG9iYWxUaGlzIGFzIGFueSkucHJvY2VzcyA9IChnbG9iYWxUaGlzIGFzIGFueSkucHJvY2VzcyB8fCBwcm9jZXNzO1xyXG4gICAgfVxyXG4gIH0sIFtdKTtcclxuICByZXR1cm4gbnVsbDtcclxufVxyXG4iXSwibmFtZXMiOlsidXNlRWZmZWN0IiwiQnVmZmVyIiwicHJvY2VzcyIsIkJ1ZmZlclBvbHlmaWxsIiwid2luZG93IiwiZ2xvYmFsVGhpcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(ssr)/./components/BufferPolyfill.tsx\n");
+
+/***/ }),
+
+/***/ "(ssr)/./components/Toaster.tsx":
+/*!********************************!*\
+  !*** ./components/Toaster.tsx ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ AppToaster)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var sonner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sonner */ \"(ssr)/./node_modules/sonner/dist/index.mjs\");\n/* __next_internal_client_entry_do_not_use__ default auto */ \n\nfunction AppToaster() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(sonner__WEBPACK_IMPORTED_MODULE_1__.Toaster, {\n        position: \"top-right\",\n        richColors: true\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\components\\\\Toaster.tsx\",\n        lineNumber: 4,\n        columnNumber: 10\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9jb21wb25lbnRzL1RvYXN0ZXIudHN4IiwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQ2lDO0FBQ2xCLFNBQVNDO0lBQ3RCLHFCQUFPLDhEQUFDRCwyQ0FBT0E7UUFBQ0UsVUFBUztRQUFZQyxVQUFVOzs7Ozs7QUFDakQiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9oemstc3Rha2luZy1uZXh0Ly4vY29tcG9uZW50cy9Ub2FzdGVyLnRzeD8yNGU3Il0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIGNsaWVudFwiO1xyXG5pbXBvcnQgeyBUb2FzdGVyIH0gZnJvbSBcInNvbm5lclwiO1xyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBcHBUb2FzdGVyKCkge1xyXG4gIHJldHVybiA8VG9hc3RlciBwb3NpdGlvbj1cInRvcC1yaWdodFwiIHJpY2hDb2xvcnMgLz47XHJcbn1cclxuIl0sIm5hbWVzIjpbIlRvYXN0ZXIiLCJBcHBUb2FzdGVyIiwicG9zaXRpb24iLCJyaWNoQ29sb3JzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./components/Toaster.tsx\n");
+
+/***/ }),
+
+/***/ "(ssr)/./components/WalletProviders.tsx":
+/*!****************************************!*\
+  !*** ./components/WalletProviders.tsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ WalletProviders)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @solana/wallet-adapter-react */ \"(ssr)/./node_modules/@solana/wallet-adapter-react/lib/esm/ConnectionProvider.js\");\n/* harmony import */ var _solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @solana/wallet-adapter-react */ \"(ssr)/./node_modules/@solana/wallet-adapter-react/lib/esm/WalletProvider.js\");\n/* harmony import */ var _solana_wallet_adapter_react_ui__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @solana/wallet-adapter-react-ui */ \"(ssr)/./node_modules/@solana/wallet-adapter-react-ui/lib/esm/WalletModalProvider.js\");\n/* harmony import */ var _solana_wallet_adapter_phantom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @solana/wallet-adapter-phantom */ \"(ssr)/./node_modules/@solana/wallet-adapter-phantom/lib/esm/adapter.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _solana_wallet_adapter_react_ui_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @solana/wallet-adapter-react-ui/styles.css */ \"(ssr)/./node_modules/@solana/wallet-adapter-react-ui/styles.css\");\n/* __next_internal_client_entry_do_not_use__ default auto */ \n\n\n\n\n\nfunction WalletProviders({ children }) {\n    const endpoint = \"https://api.devnet.solana.com\";\n    const wallets = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>[\n            new _solana_wallet_adapter_phantom__WEBPACK_IMPORTED_MODULE_3__.PhantomWalletAdapter()\n        ], []);\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_4__.ConnectionProvider, {\n        endpoint: endpoint,\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_solana_wallet_adapter_react__WEBPACK_IMPORTED_MODULE_5__.WalletProvider, {\n            wallets: wallets,\n            autoConnect: false,\n            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_solana_wallet_adapter_react_ui__WEBPACK_IMPORTED_MODULE_6__.WalletModalProvider, {\n                children: children\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\components\\\\WalletProviders.tsx\",\n                lineNumber: 15,\n                columnNumber: 9\n            }, this)\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\components\\\\WalletProviders.tsx\",\n            lineNumber: 14,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\components\\\\WalletProviders.tsx\",\n        lineNumber: 13,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9jb21wb25lbnRzL1dhbGxldFByb3ZpZGVycy50c3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFFa0Y7QUFDWjtBQUNBO0FBQy9CO0FBQ2E7QUFFckMsU0FBU00sZ0JBQWdCLEVBQUVDLFFBQVEsRUFBaUM7SUFDakYsTUFBTUMsV0FBVztJQUNqQixNQUFNQyxVQUFVSiw4Q0FBT0EsQ0FBQyxJQUFNO1lBQUMsSUFBSUYsZ0ZBQW9CQTtTQUFHLEVBQUUsRUFBRTtJQUM5RCxxQkFDRSw4REFBQ0gsNEVBQWtCQTtRQUFDUSxVQUFVQTtrQkFDNUIsNEVBQUNQLHdFQUFjQTtZQUFDUSxTQUFTQTtZQUFTQyxhQUFhO3NCQUM3Qyw0RUFBQ1IsZ0ZBQW1CQTswQkFBRUs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFJOUIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9oemstc3Rha2luZy1uZXh0Ly4vY29tcG9uZW50cy9XYWxsZXRQcm92aWRlcnMudHN4P2E3YzkiXSwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2UgY2xpZW50XCI7XHJcblxyXG5pbXBvcnQgeyBDb25uZWN0aW9uUHJvdmlkZXIsIFdhbGxldFByb3ZpZGVyIH0gZnJvbSBcIkBzb2xhbmEvd2FsbGV0LWFkYXB0ZXItcmVhY3RcIjtcclxuaW1wb3J0IHsgV2FsbGV0TW9kYWxQcm92aWRlciB9IGZyb20gXCJAc29sYW5hL3dhbGxldC1hZGFwdGVyLXJlYWN0LXVpXCI7XHJcbmltcG9ydCB7IFBoYW50b21XYWxsZXRBZGFwdGVyIH0gZnJvbSBcIkBzb2xhbmEvd2FsbGV0LWFkYXB0ZXItcGhhbnRvbVwiO1xyXG5pbXBvcnQgUmVhY3QsIHsgdXNlTWVtbyB9IGZyb20gXCJyZWFjdFwiO1xyXG5pbXBvcnQgXCJAc29sYW5hL3dhbGxldC1hZGFwdGVyLXJlYWN0LXVpL3N0eWxlcy5jc3NcIjtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFdhbGxldFByb3ZpZGVycyh7IGNoaWxkcmVuIH06IHsgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZSB9KSB7XHJcbiAgY29uc3QgZW5kcG9pbnQgPSBcImh0dHBzOi8vYXBpLmRldm5ldC5zb2xhbmEuY29tXCI7XHJcbiAgY29uc3Qgd2FsbGV0cyA9IHVzZU1lbW8oKCkgPT4gW25ldyBQaGFudG9tV2FsbGV0QWRhcHRlcigpXSwgW10pO1xyXG4gIHJldHVybiAoXHJcbiAgICA8Q29ubmVjdGlvblByb3ZpZGVyIGVuZHBvaW50PXtlbmRwb2ludH0+XHJcbiAgICAgIDxXYWxsZXRQcm92aWRlciB3YWxsZXRzPXt3YWxsZXRzfSBhdXRvQ29ubmVjdD17ZmFsc2V9PlxyXG4gICAgICAgIDxXYWxsZXRNb2RhbFByb3ZpZGVyPntjaGlsZHJlbn08L1dhbGxldE1vZGFsUHJvdmlkZXI+XHJcbiAgICAgIDwvV2FsbGV0UHJvdmlkZXI+XHJcbiAgICA8L0Nvbm5lY3Rpb25Qcm92aWRlcj5cclxuICApO1xyXG59XHJcbiJdLCJuYW1lcyI6WyJDb25uZWN0aW9uUHJvdmlkZXIiLCJXYWxsZXRQcm92aWRlciIsIldhbGxldE1vZGFsUHJvdmlkZXIiLCJQaGFudG9tV2FsbGV0QWRhcHRlciIsIlJlYWN0IiwidXNlTWVtbyIsIldhbGxldFByb3ZpZGVycyIsImNoaWxkcmVuIiwiZW5kcG9pbnQiLCJ3YWxsZXRzIiwiYXV0b0Nvbm5lY3QiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./components/WalletProviders.tsx\n");
 
 /***/ }),
 
@@ -170,7 +412,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ RootLayout),\n/* harmony export */   metadata: () => (/* binding */ metadata)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(rsc)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./globals.css */ \"(rsc)/./app/globals.css\");\n\n\nconst metadata = {\n    title: \"HZK Staking Dashboard\",\n    description: \"Built for devnet. Test with Phantom on devnet.\"\n};\nfunction RootLayout({ children }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"html\", {\n        lang: \"en\",\n        suppressHydrationWarning: true,\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"body\", {\n            children: children\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\layout.tsx\",\n            lineNumber: 12,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\layout.tsx\",\n        lineNumber: 11,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9hcHAvbGF5b3V0LnRzeCIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFDdUI7QUFFaEIsTUFBTUEsV0FBcUI7SUFDaENDLE9BQU87SUFDUEMsYUFBYTtBQUNmLEVBQUU7QUFFYSxTQUFTQyxXQUFXLEVBQUVDLFFBQVEsRUFBaUM7SUFDNUUscUJBQ0UsOERBQUNDO1FBQUtDLE1BQUs7UUFBS0Msd0JBQXdCO2tCQUN0Qyw0RUFBQ0M7c0JBQ0VKOzs7Ozs7Ozs7OztBQUlUIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vaHprLXN0YWtpbmctbmV4dC8uL2FwcC9sYXlvdXQudHN4Pzk5ODgiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gXCJuZXh0XCI7XHJcbmltcG9ydCBcIi4vZ2xvYmFscy5jc3NcIjtcclxuXHJcbmV4cG9ydCBjb25zdCBtZXRhZGF0YTogTWV0YWRhdGEgPSB7XHJcbiAgdGl0bGU6IFwiSFpLIFN0YWtpbmcgRGFzaGJvYXJkXCIsXHJcbiAgZGVzY3JpcHRpb246IFwiQnVpbHQgZm9yIGRldm5ldC4gVGVzdCB3aXRoIFBoYW50b20gb24gZGV2bmV0LlwiLFxyXG59O1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUm9vdExheW91dCh7IGNoaWxkcmVuIH06IHsgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZSB9KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxodG1sIGxhbmc9XCJlblwiIHN1cHByZXNzSHlkcmF0aW9uV2FybmluZz5cclxuICAgICAgPGJvZHk+XHJcbiAgICAgICAge2NoaWxkcmVufVxyXG4gICAgICA8L2JvZHk+XHJcbiAgICA8L2h0bWw+XHJcbiAgKTtcclxufVxyXG4iXSwibmFtZXMiOlsibWV0YWRhdGEiLCJ0aXRsZSIsImRlc2NyaXB0aW9uIiwiUm9vdExheW91dCIsImNoaWxkcmVuIiwiaHRtbCIsImxhbmciLCJzdXBwcmVzc0h5ZHJhdGlvbldhcm5pbmciLCJib2R5Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(rsc)/./app/layout.tsx\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ RootLayout),\n/* harmony export */   metadata: () => (/* binding */ metadata)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(rsc)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./globals.css */ \"(rsc)/./app/globals.css\");\n/* harmony import */ var _components_WalletProviders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/WalletProviders */ \"(rsc)/./components/WalletProviders.tsx\");\n/* harmony import */ var _components_BufferPolyfill__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/BufferPolyfill */ \"(rsc)/./components/BufferPolyfill.tsx\");\n/* harmony import */ var _components_Toaster__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/Toaster */ \"(rsc)/./components/Toaster.tsx\");\n\n\n\n\n\nconst metadata = {\n    title: \"HZK Staking Dashboard\",\n    description: \"Built for devnet. Test with Phantom on devnet.\"\n};\nfunction RootLayout({ children }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"html\", {\n        lang: \"en\",\n        suppressHydrationWarning: true,\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"body\", {\n            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_WalletProviders__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_BufferPolyfill__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {}, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\layout.tsx\",\n                        lineNumber: 17,\n                        columnNumber: 11\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_Toaster__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {}, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\layout.tsx\",\n                        lineNumber: 18,\n                        columnNumber: 11\n                    }, this),\n                    children\n                ]\n            }, void 0, true, {\n                fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\layout.tsx\",\n                lineNumber: 16,\n                columnNumber: 9\n            }, this)\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\layout.tsx\",\n            lineNumber: 15,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Billy Joe\\\\OneDrive\\\\Desktop\\\\Github\\\\HZK\\\\hzk-ui\\\\hzk-staking-ui\\\\hzk-next\\\\app\\\\layout.tsx\",\n        lineNumber: 14,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9hcHAvbGF5b3V0LnRzeCIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFDdUI7QUFDb0M7QUFDRjtBQUNYO0FBRXZDLE1BQU1HLFdBQXFCO0lBQ2hDQyxPQUFPO0lBQ1BDLGFBQWE7QUFDZixFQUFFO0FBRWEsU0FBU0MsV0FBVyxFQUFFQyxRQUFRLEVBQWlDO0lBQzVFLHFCQUNFLDhEQUFDQztRQUFLQyxNQUFLO1FBQUtDLHdCQUF3QjtrQkFDdEMsNEVBQUNDO3NCQUNDLDRFQUFDWCxtRUFBZUE7O2tDQUNkLDhEQUFDQyxrRUFBY0E7Ozs7O2tDQUNmLDhEQUFDQywyREFBVUE7Ozs7O29CQUNWSzs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFLWCIsInNvdXJjZXMiOlsid2VicGFjazovL2h6ay1zdGFraW5nLW5leHQvLi9hcHAvbGF5b3V0LnRzeD85OTg4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB0eXBlIHsgTWV0YWRhdGEgfSBmcm9tIFwibmV4dFwiO1xyXG5pbXBvcnQgXCIuL2dsb2JhbHMuY3NzXCI7XHJcbmltcG9ydCBXYWxsZXRQcm92aWRlcnMgZnJvbSBcIkAvY29tcG9uZW50cy9XYWxsZXRQcm92aWRlcnNcIjtcclxuaW1wb3J0IEJ1ZmZlclBvbHlmaWxsIGZyb20gXCJAL2NvbXBvbmVudHMvQnVmZmVyUG9seWZpbGxcIjtcclxuaW1wb3J0IEFwcFRvYXN0ZXIgZnJvbSBcIkAvY29tcG9uZW50cy9Ub2FzdGVyXCI7XHJcblxyXG5leHBvcnQgY29uc3QgbWV0YWRhdGE6IE1ldGFkYXRhID0ge1xyXG4gIHRpdGxlOiBcIkhaSyBTdGFraW5nIERhc2hib2FyZFwiLFxyXG4gIGRlc2NyaXB0aW9uOiBcIkJ1aWx0IGZvciBkZXZuZXQuIFRlc3Qgd2l0aCBQaGFudG9tIG9uIGRldm5ldC5cIixcclxufTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFJvb3RMYXlvdXQoeyBjaGlsZHJlbiB9OiB7IGNoaWxkcmVuOiBSZWFjdC5SZWFjdE5vZGUgfSkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8aHRtbCBsYW5nPVwiZW5cIiBzdXBwcmVzc0h5ZHJhdGlvbldhcm5pbmc+XHJcbiAgICAgIDxib2R5PlxyXG4gICAgICAgIDxXYWxsZXRQcm92aWRlcnM+XHJcbiAgICAgICAgICA8QnVmZmVyUG9seWZpbGwgLz5cclxuICAgICAgICAgIDxBcHBUb2FzdGVyIC8+XHJcbiAgICAgICAgICB7Y2hpbGRyZW59XHJcbiAgICAgICAgPC9XYWxsZXRQcm92aWRlcnM+XHJcbiAgICAgIDwvYm9keT5cclxuICAgIDwvaHRtbD5cclxuICApO1xyXG59XHJcbiJdLCJuYW1lcyI6WyJXYWxsZXRQcm92aWRlcnMiLCJCdWZmZXJQb2x5ZmlsbCIsIkFwcFRvYXN0ZXIiLCJtZXRhZGF0YSIsInRpdGxlIiwiZGVzY3JpcHRpb24iLCJSb290TGF5b3V0IiwiY2hpbGRyZW4iLCJodG1sIiwibGFuZyIsInN1cHByZXNzSHlkcmF0aW9uV2FybmluZyIsImJvZHkiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./app/layout.tsx\n");
 
 /***/ }),
 
@@ -201,6 +443,93 @@ const __default__ = proxy.default;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Billy Joe\OneDrive\Desktop\Github\HZK\hzk-ui\hzk-staking-ui\hzk-next\app\page.tsx#default`));
 
 
+/***/ }),
+
+/***/ "(rsc)/./components/BufferPolyfill.tsx":
+/*!***************************************!*\
+  !*** ./components/BufferPolyfill.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   $$typeof: () => (/* binding */ $$typeof),
+/* harmony export */   __esModule: () => (/* binding */ __esModule),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
+
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Billy Joe\OneDrive\Desktop\Github\HZK\hzk-ui\hzk-staking-ui\hzk-next\components\BufferPolyfill.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+const __default__ = proxy.default;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Billy Joe\OneDrive\Desktop\Github\HZK\hzk-ui\hzk-staking-ui\hzk-next\components\BufferPolyfill.tsx#default`));
+
+
+/***/ }),
+
+/***/ "(rsc)/./components/Toaster.tsx":
+/*!********************************!*\
+  !*** ./components/Toaster.tsx ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   $$typeof: () => (/* binding */ $$typeof),
+/* harmony export */   __esModule: () => (/* binding */ __esModule),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
+
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Billy Joe\OneDrive\Desktop\Github\HZK\hzk-ui\hzk-staking-ui\hzk-next\components\Toaster.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+const __default__ = proxy.default;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Billy Joe\OneDrive\Desktop\Github\HZK\hzk-ui\hzk-staking-ui\hzk-next\components\Toaster.tsx#default`));
+
+
+/***/ }),
+
+/***/ "(rsc)/./components/WalletProviders.tsx":
+/*!****************************************!*\
+  !*** ./components/WalletProviders.tsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   $$typeof: () => (/* binding */ $$typeof),
+/* harmony export */   __esModule: () => (/* binding */ __esModule),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
+
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Billy Joe\OneDrive\Desktop\Github\HZK\hzk-ui\hzk-staking-ui\hzk-next\components\WalletProviders.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+const __default__ = proxy.default;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\Billy Joe\OneDrive\Desktop\Github\HZK\hzk-ui\hzk-staking-ui\hzk-next\components\WalletProviders.tsx#default`));
+
+
 /***/ })
 
 };
@@ -210,7 +539,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@swc","vendor-chunks/styled-jsx"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fpage&page=%2Fpage&appPaths=%2Fpage&pagePath=private-next-app-dir%2Fpage.tsx&appDir=C%3A%5CUsers%5CBilly%20Joe%5COneDrive%5CDesktop%5CGithub%5CHZK%5Chzk-ui%5Chzk-staking-ui%5Chzk-next%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5CBilly%20Joe%5COneDrive%5CDesktop%5CGithub%5CHZK%5Chzk-ui%5Chzk-staking-ui%5Chzk-next&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/@solana","vendor-chunks/next","vendor-chunks/@solana-mobile","vendor-chunks/tr46","vendor-chunks/@noble","vendor-chunks/rpc-websockets","vendor-chunks/bn.js","vendor-chunks/qrcode","vendor-chunks/pngjs","vendor-chunks/node-fetch","vendor-chunks/sonner","vendor-chunks/whatwg-url","vendor-chunks/text-encoding-utf-8","vendor-chunks/borsh","vendor-chunks/@wallet-standard","vendor-chunks/uuid","vendor-chunks/jayson","vendor-chunks/node-gyp-build","vendor-chunks/dijkstrajs","vendor-chunks/webidl-conversions","vendor-chunks/base-x","vendor-chunks/@swc","vendor-chunks/utf-8-validate","vendor-chunks/safe-buffer","vendor-chunks/bufferutil","vendor-chunks/bs58","vendor-chunks/styled-jsx"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fpage&page=%2Fpage&appPaths=%2Fpage&pagePath=private-next-app-dir%2Fpage.tsx&appDir=C%3A%5CUsers%5CBilly%20Joe%5COneDrive%5CDesktop%5CGithub%5CHZK%5Chzk-ui%5Chzk-staking-ui%5Chzk-next%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5CBilly%20Joe%5COneDrive%5CDesktop%5CGithub%5CHZK%5Chzk-ui%5Chzk-staking-ui%5Chzk-next&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
 module.exports = __webpack_exports__;
 
 })();
