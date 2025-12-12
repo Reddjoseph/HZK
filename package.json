@@ -1,0 +1,24 @@
+{
+  "name": "hanzenko-hzk-",
+  "version": "1.0.0",
+  "description": "This is HANZENKO WEB APP",
+  "main": "tally-hzk-fees.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reddjoseph/HZK.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reddjoseph/HZK/issues"
+  },
+  "homepage": "https://github.com/Reddjoseph/HZK#readme",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4"
+  }
+}

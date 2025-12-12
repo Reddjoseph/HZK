@@ -1,0 +1,54 @@
+name: Update HZK Leaderboard
+
+# Run on schedule and manually
+on:
+  schedule:
+    # every 10 minutes (change to your desired frequency)
+    - cron: '*/10 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # allows pushing updated file back to the repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PAGES_BRANCH: main   # <- change this to 'gh-pages' if your Pages branch is gh-pages
+    steps:
+      - name: Checkout repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Run tally script (generate public/hzktop3.json)
+        run: node tally-hzk-fees.js
+
+      - name: Show git status (debug)
+        run: |
+          echo "Current branch: $(git rev-parse --abbrev-ref HEAD)"
+          git status --porcelain || true
+          ls -la public || true
+
+      - name: Commit and push hzktop3.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Add only the generated file to avoid accidental commits
+          if git status --porcelain | grep -q "public/hzktop3.json"; then
+            git add public/hzktop3.json
+            git commit -m "chore: update hzktop3.json (auto) [skip ci]" || echo "commit failed/no changes"
+            # push to the pages branch (change PAGES_BRANCH above if needed)
+            git push origin HEAD:${PAGES_BRANCH}
+            echo "hzktop3.json committed and pushed to ${PAGES_BRANCH}"
+          else
+            echo "No changes to public/hzktop3.json — nothing to commit."
+          fi

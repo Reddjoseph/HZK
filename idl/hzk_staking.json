@@ -112,6 +112,76 @@
       ]
     },
     {
+      "name": "hatch",
+      "docs": [
+        "Hatch instruction:",
+        "- Moves `hatch_fee_amount` from the user's HZK ATA into four destination ATAs",
+        "(DEV 20%, COMMUNITY 18%, SINK 60%, INCENTIVES 2%).",
+        "- DOES NOT touch or burn any Chrysalis NFTs.",
+        "All transfers are CPI to the token program and require the user to sign."
+      ],
+      "discriminator": [
+        252,
+        228,
+        210,
+        2,
+        100,
+        135,
+        229,
+        207
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "docs": [
+            "User (payer + authority for their token accounts)"
+          ],
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "user_hzk_ata",
+          "writable": true
+        },
+        {
+          "name": "dev_hzk_ata",
+          "writable": true
+        },
+        {
+          "name": "community_hzk_ata",
+          "writable": true
+        },
+        {
+          "name": "sink_hzk_ata",
+          "writable": true
+        },
+        {
+          "name": "incentives_hzk_ata",
+          "writable": true
+        },
+        {
+          "name": "chrysalis_token_account",
+          "writable": true
+        },
+        {
+          "name": "chrysalis_mint"
+        },
+        {
+          "name": "token_program",
+          "docs": [
+            "token program"
+          ],
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "hatch_fee_amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
       "name": "initialize_pool",
       "docs": [
         "Initialize a pool account."
@@ -419,6 +489,10 @@
           {
             "name": "last_updated",
             "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
           }
         ]
       }
