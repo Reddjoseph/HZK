@@ -5,6 +5,7 @@
   "main": "tally-hzk-fees.js",
   "type": "module",
   "scripts": {
+    "update-leaderboard": "node tally-hzk-fees.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
