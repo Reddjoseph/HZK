@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2025-12-13T08:13:20.498Z",
+  "generatedAt": "2025-12-13T08:39:28.102Z",
   "cluster": "devnet",
   "mint": null,
   "unitDecimals": 0,
   "leaderboard": {
     "top": {
       "owner": "HUaAd8qAR3qZ7XnLZiq9Su9gd5Rv9bTdnMDs59VFbwY3",
-      "totalBaseUnits": "2000000000000000",
-      "burned": 2000000000000000
+      "totalBaseUnits": "2500000000000000",
+      "burned": 2500000000000000
     },
     "rows": [],
     "all": [
       {
         "owner": "HUaAd8qAR3qZ7XnLZiq9Su9gd5Rv9bTdnMDs59VFbwY3",
-        "totalBaseUnits": "2000000000000000",
-        "burned": 2000000000000000
+        "totalBaseUnits": "2500000000000000",
+        "burned": 2500000000000000
       }
     ]
   }
