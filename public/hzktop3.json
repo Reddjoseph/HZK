@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2025-12-15T22:36:38.355Z",
+  "generatedAt": "2025-12-15T22:48:55.587Z",
   "cluster": "mainnet-beta",
   "mint": "8zzDzPCCLd1TaEy35mwN1GJW89QEFP6ypveutcjRpump",
   "unitDecimals": 6,
-  "totalBurned": 215000,
-  "totalHatches": 43,
+  "totalBurned": 230000,
+  "totalHatches": 46,
   "leaderboard": {
     "top": {
       "owner": "9hGqnnRCFx5T72avhMv22Y3siJWjF56QRUUBGqXsJ1Ys",
@@ -44,6 +44,12 @@
         "totalBaseUnits": "15000000000",
         "burned": 15000,
         "hatches": 3
+      },
+      {
+        "owner": "3phMNWiwZH5gp2kv5RTbKSsTn6EBwC3GHmVhCn9Le54o",
+        "totalBaseUnits": "10000000000",
+        "burned": 10000,
+        "hatches": 2
       },
       {
         "owner": "4GArvE9QRcy9kBESJEzQDjdQLRpjCqgHArxDjc2qRS9L",
@@ -98,6 +104,12 @@
         "totalBaseUnits": "10000000000",
         "burned": 10000,
         "hatches": 2
+      },
+      {
+        "owner": "4sz5UfpQiNMB3FEjqRYtPBbPVBp57CWyePTUtu2tNWGY",
+        "totalBaseUnits": "5000000000",
+        "burned": 5000,
+        "hatches": 1
       },
       {
         "owner": "EqXrvvLFFzaGPw93fsybyuSv6z3BGmnL9MFPxx5RRLAm",
