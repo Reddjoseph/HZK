@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2025-12-15T21:52:58.508Z",
+  "generatedAt": "2025-12-15T22:11:12.964Z",
   "cluster": "mainnet-beta",
   "mint": "8zzDzPCCLd1TaEy35mwN1GJW89QEFP6ypveutcjRpump",
   "unitDecimals": 6,
-  "totalBurned": 210000,
-  "totalHatches": 42,
+  "totalBurned": 215000,
+  "totalHatches": 43,
   "leaderboard": {
     "top": {
       "owner": "9hGqnnRCFx5T72avhMv22Y3siJWjF56QRUUBGqXsJ1Ys",
@@ -44,6 +44,12 @@
         "totalBaseUnits": "15000000000",
         "burned": 15000,
         "hatches": 3
+      },
+      {
+        "owner": "4GArvE9QRcy9kBESJEzQDjdQLRpjCqgHArxDjc2qRS9L",
+        "totalBaseUnits": "10000000000",
+        "burned": 10000,
+        "hatches": 2
       },
       {
         "owner": "Cxbe9HVTa6nL35GyhSjt8uC6hmzFcbzvUuCNX4zXZHGk",
@@ -125,12 +131,6 @@
       },
       {
         "owner": "7bLcAQAZYaWjXM8YZW3FefC5Hfqdn9CwHfdUSjJ1meWx",
-        "totalBaseUnits": "5000000000",
-        "burned": 5000,
-        "hatches": 1
-      },
-      {
-        "owner": "4GArvE9QRcy9kBESJEzQDjdQLRpjCqgHArxDjc2qRS9L",
         "totalBaseUnits": "5000000000",
         "burned": 5000,
         "hatches": 1
