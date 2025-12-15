@@ -1,356 +1,308 @@
-// tally-hzk-fees.js
+// tally-hzk-burns.js
+// Tracks HZK burns specifically from Hanzenko hatching fees
 // ES module. Writes public/hzktop3.json (creates public/ if missing).
-// Run locally: node tally-hzk-fees.js
 
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
+import { Connection, PublicKey } from "@solana/web3.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const FEE_ACCOUNTS = [
-  "CYG9vWJVNQPBm82CQ3Qyrs1S99mVaV1btArfvqSXVamX",
-  "HayfSrGjEn6dzdvmd6SoBWi9Xm63qwtTZbDt7CnfNPSD",
-  "FM8AMzgJCCmcf97mvWAYr3K4K86mUs4tXKcjBL7N8LS9",
-  "37AzogzoPNyGvjmjtx9ztFUuDXLMPinHAc1qGeZULJHm"
+// HanZenKo (HZK) Token Configuration
+const HZK_TOKEN_MINT = "8zzDzPCCLd1TaEy35mwN1GJW89QEFP6ypveutcjRpump";
+const HZK_DECIMALS = 6;
+const HATCH_FEE = 5000; // 5000 HZK per hatch
+
+// Your game's fee collection addresses
+const GAME_FEE_ADDRESSES = [
+  "64MVZSkwRxKvqzCn3ZTHwkJgB1C4hwEZYGppQPfQWNNh", // DEV (20%)
+  "AkbAYnnGWFGzVZLG6paH61qWpBe2DQW2xKZpQXF9WL3V", // Community (18%)
+  "C54xp5d7JSxfFgpBF8JjPLDBkGukDdy3jdNS9PnCrCw9", // Incentives (2%)
 ];
 
-const CLUSTER = "devnet";
-const connection = new Connection(clusterApiUrl(CLUSTER), "confirmed");
+const CLUSTER = "mainnet-beta";
+const RPC_ENDPOINT = "https://mainnet.helius-rpc.com/?api-key=08b42024-9864-4c44-b8bb-8b9ba745505c";
+const connection = new Connection(RPC_ENDPOINT, "confirmed");
 
-// Tuning (safe defaults)
-const PAGE_LIMIT = 1000;
-const MAX_PAGES_PER_ACCOUNT = 50;
-const MAX_TOTAL_SIGNATURES = 20000;
-const PARSED_TX_DELAY_MS = 80;
-const RPC_CALL_TIMEOUT_MS = 10000;
-const RPC_RETRIES = 2;
+// Tuning
+const MAX_SIGNATURES_PER_ACCOUNT = 5000;
+const BATCH_SIZE = 50;
+const DELAY_BETWEEN_BATCHES_MS = 100;
+const RPC_TIMEOUT_MS = 15000;
+const RPC_RETRIES = 3;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function callWithTimeoutAndRetries(fnFactory, timeoutMs = RPC_CALL_TIMEOUT_MS, retries = RPC_RETRIES) {
+/* =========================
+   RPC WITH RETRY
+   ========================= */
+
+async function callWithRetry(fn, retries = RPC_RETRIES) {
   let attempt = 0;
   while (true) {
     attempt++;
     try {
-      const p = fnFactory();
-      const res = await Promise.race([
-        p,
-        new Promise((_, rej) => setTimeout(() => rej(new Error("RPC timeout")), timeoutMs)),
+      const result = await Promise.race([
+        fn(),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error("RPC timeout")), RPC_TIMEOUT_MS)
+        ),
       ]);
-      return res;
+      return result;
     } catch (err) {
       const isLast = attempt > retries;
-      console.warn(`RPC attempt ${attempt}/${retries + 1} failed: ${err?.message ?? err}${isLast ? " — giving up." : " — retrying..."}`);
       if (isLast) throw err;
-      await sleep(300 * attempt);
+      console.warn(`  Retry ${attempt}/${retries}: ${err.message}`);
+      await sleep(500 * attempt);
     }
   }
 }
 
-async function fetchSignaturesForAccountSafe(account) {
-  const sigs = [];
+/* =========================
+   GET SIGNATURES FOR FEE ACCOUNT
+   ========================= */
+
+async function getSignaturesForFeeAccount(address, limit = MAX_SIGNATURES_PER_ACCOUNT) {
+  console.log(`Fetching signatures for: ${address}`);
+  const signatures = [];
   let before = undefined;
-  let pages = 0;
-  let lastSeen = null;
-
-  while (true) {
-    pages++;
-    if (pages > MAX_PAGES_PER_ACCOUNT) {
-      console.warn(`Reached max pages (${MAX_PAGES_PER_ACCOUNT}) for ${account}; stopping early.`);
-      break;
-    }
-
-    try {
-      const page = await callWithTimeoutAndRetries(
-        () => connection.getSignaturesForAddress(new PublicKey(account), { before, limit: PAGE_LIMIT }),
-        RPC_CALL_TIMEOUT_MS,
-        RPC_RETRIES
-      );
-
-      if (!page || page.length === 0) break;
-
-      const currentLast = page[page.length - 1].signature;
-      if (lastSeen && currentLast === lastSeen) {
-        for (const p of page) sigs.push(p.signature);
-        break;
-      }
-      lastSeen = currentLast;
-
-      for (const p of page) sigs.push(p.signature);
-
-      if (page.length < PAGE_LIMIT) break;
-      before = page[page.length - 1].signature;
-
-      await sleep(50);
-    } catch (err) {
-      console.warn(`Failed to fetch page ${pages} for ${account}: ${err?.message ?? err}. Skipping remaining pages for this account.`);
-      break;
-    }
-  }
-
-  return sigs;
-}
-
-async function collectAllSignatures() {
-  const seen = new Set();
-  for (const acc of FEE_ACCOUNTS) {
-    console.log(`Fetching signatures for fee account: ${acc}`);
-    try {
-      const list = await fetchSignaturesForAccountSafe(acc);
-      console.log(`  fetched ${list.length} signatures for ${acc}`);
-      for (const s of list) {
-        seen.add(s);
-        if (seen.size >= MAX_TOTAL_SIGNATURES) {
-          console.warn(`Reached global cap of ${MAX_TOTAL_SIGNATURES} signatures; stopping collection.`);
-          return Array.from(seen);
-        }
-      }
-    } catch (err) {
-      console.warn(`Skipping ${acc} due to error: ${err?.message ?? err}`);
-    }
-  }
-  return Array.from(seen);
-}
-
-async function getTokenAccountOwner(tokenAccountPubkey) {
+  
   try {
-    const info = await callWithTimeoutAndRetries(() => connection.getParsedAccountInfo(new PublicKey(tokenAccountPubkey)), RPC_CALL_TIMEOUT_MS, RPC_RETRIES);
-    if (info?.value?.data?.parsed?.info?.owner) return info.value.data.parsed.info.owner;
+    while (signatures.length < limit) {
+      const batch = await callWithRetry(() =>
+        connection.getSignaturesForAddress(
+          new PublicKey(address),
+          { before, limit: 1000 }
+        )
+      );
+      
+      if (!batch || batch.length === 0) break;
+      
+      for (const sig of batch) {
+        signatures.push(sig.signature);
+        if (signatures.length >= limit) break;
+      }
+      
+      before = batch[batch.length - 1].signature;
+      
+      if (batch.length < 1000) break;
+      await sleep(100);
+    }
   } catch (err) {
-    // ignore
+    console.warn(`  Error fetching signatures for ${address}: ${err.message}`);
   }
-  return null;
+  
+  console.log(`  Found ${signatures.length} signatures`);
+  return signatures;
 }
 
-async function extractFeeDepositsFromParsedTx(parsed) {
-  const results = [];
-  if (!parsed || !parsed.meta) return results;
+/* =========================
+   EXTRACT HATCHING FEE FROM TX
+   ========================= */
 
-  const pre = parsed.meta.preTokenBalances || [];
-  const post = parsed.meta.postTokenBalances || [];
-  const accountKeys = parsed.transaction.message.accountKeys.map(k => (typeof k === "string" ? k : k.pubkey));
-
-  const balanceMap = new Map();
-  for (const p of pre) balanceMap.set(p.accountIndex, { mint: p.mint, owner: p.owner || null, preAmtStr: p.uiTokenAmount?.amount ?? "0", decimals: p.uiTokenAmount?.decimals ?? 0 });
-  for (const p of post) {
-    const prev = balanceMap.get(p.accountIndex) ?? { mint: p.mint, owner: p.owner || null, preAmtStr: "0", decimals: p.uiTokenAmount?.decimals ?? 0 };
-    prev.postAmtStr = p.uiTokenAmount?.amount ?? "0";
-    if (!prev.decimals && p.uiTokenAmount?.decimals != null) prev.decimals = p.uiTokenAmount.decimals;
-    balanceMap.set(p.accountIndex, prev);
-  }
-
-  // pre/post deltas first
-  for (const feeAcc of FEE_ACCOUNTS) {
-    const feeIdx = accountKeys.indexOf(feeAcc);
-    if (feeIdx === -1) continue;
-    const feeEntry = balanceMap.get(feeIdx);
-    if (!feeEntry) continue;
-    const preAmt = BigInt(feeEntry.preAmtStr ?? "0");
-    const postAmt = BigInt(feeEntry.postAmtStr ?? "0");
-    const delta = postAmt - preAmt;
-    if (delta > 0n) {
-      for (const [idx, vals] of balanceMap.entries()) {
-        if (idx === feeIdx) continue;
-        if (vals.mint !== feeEntry.mint) continue;
-        const srcPre = BigInt(vals.preAmtStr ?? "0");
-        const srcPost = BigInt(vals.postAmtStr ?? "0");
-        const srcDelta = srcPost - srcPre;
-        if (srcDelta < 0n) {
-          const owner = vals.owner || accountKeys[idx] || null;
-          results.push({
-            feeAccount: feeAcc,
-            mint: feeEntry.mint,
-            amountBaseUnits: -srcDelta,
-            sourceTokenAccount: accountKeys[idx],
-            sourceOwner: owner
-          });
+async function extractHatchingFeeFromTx(signature) {
+  try {
+    const tx = await callWithRetry(() =>
+      connection.getParsedTransaction(signature, {
+        maxSupportedTransactionVersion: 0,
+      })
+    );
+    
+    if (!tx || !tx.meta) return null;
+    
+    const accountKeys = tx.transaction.message.accountKeys.map(k => 
+      typeof k === "string" ? k : k.pubkey.toString()
+    );
+    
+    // Check pre/post token balances for HZK transfers to fee addresses
+    const preBalances = tx.meta.preTokenBalances || [];
+    const postBalances = tx.meta.postTokenBalances || [];
+    
+    const balanceMap = new Map();
+    
+    // Map pre-balances
+    for (const pre of preBalances) {
+      if (pre.mint !== HZK_TOKEN_MINT) continue;
+      balanceMap.set(pre.accountIndex, {
+        mint: pre.mint,
+        owner: pre.owner,
+        preAmount: BigInt(pre.uiTokenAmount?.amount || "0"),
+        postAmount: 0n,
+      });
+    }
+    
+    // Update with post-balances
+    for (const post of postBalances) {
+      if (post.mint !== HZK_TOKEN_MINT) continue;
+      const existing = balanceMap.get(post.accountIndex) || {
+        mint: post.mint,
+        owner: post.owner,
+        preAmount: 0n,
+      };
+      existing.postAmount = BigInt(post.uiTokenAmount?.amount || "0");
+      balanceMap.set(post.accountIndex, existing);
+    }
+    
+    // Find transfers TO game fee addresses
+    let totalFee = 0n;
+    let payer = null;
+    
+    for (const [idx, balance] of balanceMap.entries()) {
+      // Check if this is one of our game fee accounts
+      const isFeeAccount = GAME_FEE_ADDRESSES.includes(balance.owner);
+      
+      if (!isFeeAccount) continue;
+      
+      const delta = balance.postAmount - balance.preAmount;
+      if (delta > 0n) {
+        totalFee += delta;
+        
+        // Find the source wallet (who paid the fee)
+        if (!payer) {
+          for (const [srcIdx, srcBalance] of balanceMap.entries()) {
+            if (srcIdx === idx) continue;
+            if (srcBalance.mint !== HZK_TOKEN_MINT) continue;
+            
+            const srcDelta = srcBalance.postAmount - srcBalance.preAmount;
+            if (srcDelta < 0n) {
+              payer = srcBalance.owner;
+              break;
+            }
+          }
         }
       }
     }
-  }
-
-  if (results.length > 0) return results;
-
-  // otherwise check parsed instructions & inner instructions
-  const allInstructions = [];
-  if (Array.isArray(parsed.transaction.message.instructions)) {
-    for (const ix of parsed.transaction.message.instructions) allInstructions.push(ix);
-  }
-  const inner = parsed.meta.innerInstructions || [];
-  for (const group of inner) {
-    for (const ix of group.instructions) allInstructions.push(ix);
-  }
-
-  for (const ix of allInstructions) {
-    const parsedIx = ix.parsed ?? ix;
-    const kind = parsedIx.type || parsedIx.parsed?.type;
-    const info = parsedIx.info || parsedIx.parsed?.info;
-    if (!info || !kind) continue;
-    if (!["transfer", "transferChecked", "mintTo", "mintToChecked"].includes(kind)) continue;
-    const dest = info.destination ?? info.to ?? info.account;
-    const src = info.source ?? info.from ?? info.account;
-    const amt = info.amount ?? null;
-    if (!dest || amt == null) continue;
-    if (!FEE_ACCOUNTS.includes(dest)) continue;
-
-    let mint = null;
-    const destIdx = accountKeys.indexOf(dest);
-    if (destIdx !== -1 && balanceMap.has(destIdx)) mint = balanceMap.get(destIdx).mint;
-    const srcIdx = accountKeys.indexOf(src);
-    if (!mint && srcIdx !== -1 && balanceMap.has(srcIdx)) mint = balanceMap.get(srcIdx).mint;
-
-    let amountBase;
-    try {
-      amountBase = BigInt(amt.toString());
-    } catch (e) {
-      continue;
+    
+    // Only count if this looks like a hatching fee transaction
+    // Expected: 40% of 5000 HZK = 2000 HZK (in base units: 2,000,000,000)
+    // Allow some variance for rounding: 1900-2100 HZK
+    const minExpected = BigInt(1900 * 1_000_000); // 1900 HZK
+    const maxExpected = BigInt(2100 * 1_000_000); // 2100 HZK
+    
+    if (totalFee >= minExpected && totalFee <= maxExpected && payer) {
+      // This is a valid hatching fee transaction
+      // Calculate full 5000 HZK (totalFee / 0.4)
+      const fullHatchFee = BigInt(5000 * 1_000_000); // Exactly 5000 HZK
+      
+      return {
+        payer,
+        amount: fullHatchFee,
+        signature,
+        feeReceived: totalFee,
+      };
     }
-
-    let owner = null;
-    if (srcIdx !== -1 && balanceMap.has(srcIdx)) owner = balanceMap.get(srcIdx).owner || null;
-    if (!owner && src) owner = await getTokenAccountOwner(src).catch(() => null);
-
-    results.push({
-      feeAccount: dest,
-      mint,
-      amountBaseUnits: amountBase,
-      sourceTokenAccount: src,
-      sourceOwner: owner
-    });
+    
+    return null;
+  } catch (err) {
+    // Silently skip failed transactions
+    return null;
   }
-
-  return results;
 }
+
+/* =========================
+   BUILD LEADERBOARD
+   ========================= */
 
 async function buildLeaderboard() {
-  console.log("Collecting signatures touching fee accounts...");
-  const signatures = await collectAllSignatures();
-  console.log(`Total unique signatures: ${signatures.length}`);
-  if (signatures.length === 0) return null;
-
-  // try to detect dominant mint first (optional)
-  const mintTotals = new Map();
-  const parsedCache = new Map();
+  console.log("Collecting hatching transactions from fee accounts...");
+  
+  // Collect all unique signatures across fee accounts
+  const allSignatures = new Set();
+  
+  for (const address of GAME_FEE_ADDRESSES) {
+    const sigs = await getSignaturesForFeeAccount(address);
+    for (const sig of sigs) {
+      allSignatures.add(sig);
+    }
+  }
+  
+  const signatures = Array.from(allSignatures);
+  console.log(`\nProcessing ${signatures.length} unique transactions...`);
+  
+  if (signatures.length === 0) {
+    return null;
+  }
+  
+  const burnsByWallet = new Map();
+  const hatchesByWallet = new Map();
   let processed = 0;
-
-  for (const sig of signatures) {
-    processed++;
-    try {
-      const parsed = await callWithTimeoutAndRetries(() => connection.getParsedTransaction(sig, "confirmed"), RPC_CALL_TIMEOUT_MS, RPC_RETRIES);
-      await sleep(PARSED_TX_DELAY_MS);
-      if (!parsed || !parsed.meta) continue;
-      parsedCache.set(sig, parsed);
-
-      const pre = parsed.meta.preTokenBalances || [];
-      const post = parsed.meta.postTokenBalances || [];
-      const accountKeys = parsed.transaction.message.accountKeys.map((k) => (typeof k === "string" ? k : k.pubkey));
-
-      const balanceMap = new Map();
-      for (const p of pre) balanceMap.set(p.accountIndex, { mint: p.mint, preAmtStr: p.uiTokenAmount?.amount ?? "0" });
-      for (const p of post) {
-        const prev = balanceMap.get(p.accountIndex) ?? { mint: p.mint, preAmtStr: "0" };
-        prev.postAmtStr = p.uiTokenAmount?.amount ?? "0";
-        prev.mint = p.mint;
-        balanceMap.set(p.accountIndex, prev);
-      }
-
-      for (const feeAcc of FEE_ACCOUNTS) {
-        const feeIdx = accountKeys.indexOf(feeAcc);
-        if (feeIdx === -1) continue;
-        const feeEntry = balanceMap.get(feeIdx);
-        if (!feeEntry) continue;
-        const preAmt = BigInt(feeEntry.preAmtStr ?? "0");
-        const postAmt = BigInt(feeEntry.postAmtStr ?? "0");
-        const delta = postAmt - preAmt;
-        if (delta > 0n) {
-          const prev = mintTotals.get(feeEntry.mint) || 0n;
-          mintTotals.set(feeEntry.mint, prev + delta);
+  let validHatches = 0;
+  let skippedWrongAmount = 0;
+  let skippedNoData = 0;
+  
+  // Process in batches
+  for (let i = 0; i < signatures.length; i += BATCH_SIZE) {
+    const batch = signatures.slice(i, i + BATCH_SIZE);
+    
+    const results = await Promise.allSettled(
+      batch.map(sig => extractHatchingFeeFromTx(sig))
+    );
+    
+    for (const result of results) {
+      if (result.status === "fulfilled") {
+        if (result.value) {
+          const hatch = result.value;
+          const current = burnsByWallet.get(hatch.payer) || 0n;
+          burnsByWallet.set(hatch.payer, current + hatch.amount);
+          
+          const currentHatches = hatchesByWallet.get(hatch.payer) || 0;
+          hatchesByWallet.set(hatch.payer, currentHatches + 1);
+          
+          validHatches++;
+        } else {
+          skippedNoData++;
         }
+      } else {
+        skippedNoData++;
       }
-    } catch (err) {
-      console.warn(`(detect) skipping tx ${sig} due to error: ${err?.message ?? err}`);
     }
-    if (processed % 50 === 0) console.log(`Detect pass: processed ${processed}/${signatures.length}`);
+    
+    processed += batch.length;
+    if (processed % 500 === 0 || processed === signatures.length) {
+      console.log(`  Processed ${processed}/${signatures.length} (${validHatches} valid hatches, ${skippedNoData} skipped)`);
+    }
+    
+    await sleep(DELAY_BETWEEN_BATCHES_MS);
   }
-
-  // choose mint (dominant) or null
-  const chooseMint = (map) => {
-    let pick = null;
-    let max = 0n;
-    for (const [m, v] of map.entries()) {
-      if (v > max) { max = v; pick = m; }
-    }
-    return pick;
-  };
-
-  const chosenMint = chooseMint(mintTotals);
-  console.log("Detected mint:", chosenMint);
-
-  // final pass: attribute deposits only for chosenMint (if detected) or all if null
-  const totalsByOwner = new Map();
-  processed = 0;
-  for (const sig of signatures) {
-    processed++;
-    try {
-      let parsed = parsedCache.get(sig);
-      if (!parsed) {
-        parsed = await callWithTimeoutAndRetries(() => connection.getParsedTransaction(sig, "confirmed"), RPC_CALL_TIMEOUT_MS, RPC_RETRIES);
-        await sleep(PARSED_TX_DELAY_MS);
-        if (!parsed || !parsed.meta) continue;
-      }
-
-      const deposits = await extractFeeDepositsFromParsedTx(parsed);
-      for (const d of deposits) {
-        if (chosenMint && d.mint && d.mint !== chosenMint) continue;
-        const owner = d.sourceOwner || "unknown";
-        totalsByOwner.set(owner, (totalsByOwner.get(owner) || 0n) + BigInt(d.amountBaseUnits));
-      }
-    } catch (err) {
-      console.warn(`(final) skipping tx ${sig} due to error: ${err?.message ?? err}`);
-    }
-
-    if (processed % 50 === 0) console.log(`Final pass: processed ${processed}/${signatures.length}`);
-  }
-
-  // find decimals (try to read from a parsed tx if available)
-  let decimals = 0;
-  for (const parsed of parsedCache.values()) {
-    const list = (parsed.meta?.postTokenBalances || []).concat(parsed.meta?.preTokenBalances || []);
-    for (const b of list) {
-      if (b.mint === chosenMint && b.uiTokenAmount?.decimals != null) {
-        decimals = b.uiTokenAmount.decimals;
-        break;
-      }
-    }
-    if (decimals) break;
-  }
-
-  const rows = Array.from(totalsByOwner.entries()).map(([owner, baseBig]) => ({
-    owner,
-    totalBaseUnits: baseBig.toString(),
-    burned: decimals ? Number((Number(baseBig.toString()) / Math.pow(10, decimals)).toFixed(Math.max(0, Math.min(6, decimals)))) : Number(baseBig.toString())
-  })).sort((a, b) => b.burned - a.burned);
-
+  
+  // Convert to leaderboard format
+  const rows = Array.from(burnsByWallet.entries())
+    .map(([owner, amount]) => ({
+      owner,
+      totalBaseUnits: amount.toString(),
+      burned: Number((Number(amount) / Math.pow(10, HZK_DECIMALS)).toFixed(HZK_DECIMALS)),
+      hatches: hatchesByWallet.get(owner) || 0,
+    }))
+    .sort((a, b) => b.burned - a.burned);
+  
+  console.log(`\nFound ${rows.length} unique players who hatched Chrysalis NFTs`);
+  console.log(`Valid hatches: ${validHatches}, Skipped transactions: ${skippedNoData}`);
+  
   return {
     generatedAt: new Date().toISOString(),
     cluster: CLUSTER,
-    mint: chosenMint,
-    unitDecimals: decimals,
+    mint: HZK_TOKEN_MINT,
+    unitDecimals: HZK_DECIMALS,
+    totalBurned: rows.reduce((sum, r) => sum + r.burned, 0),
+    totalHatches: validHatches,
     leaderboard: {
       top: rows[0] || null,
       rows: rows.slice(1, 3),
-      all: rows
-    }
+      all: rows,
+    },
   };
 }
+
+/* =========================
+   FILE WRITING
+   ========================= */
 
 function ensurePublicAndWrite(filename, dataObj) {
   const publicDir = path.join(process.cwd(), "public");
   if (!fs.existsSync(publicDir)) {
-    console.log("Public folder not found — creating ./public");
+    console.log("Creating ./public directory");
     fs.mkdirSync(publicDir, { recursive: true });
   }
   const outPath = path.join(publicDir, filename);
@@ -358,25 +310,72 @@ function ensurePublicAndWrite(filename, dataObj) {
   return outPath;
 }
 
+/* =========================
+   MAIN
+   ========================= */
+
 async function main() {
-  console.log("Building filtered HZK leaderboard...");
+  console.log("=".repeat(60));
+  console.log("HANZENKO HATCHING LEADERBOARD");
+  console.log("=".repeat(60));
+  console.log(`Token: ${HZK_TOKEN_MINT}`);
+  console.log(`Cluster: ${CLUSTER}`);
+  console.log(`Hatch Fee: ${HATCH_FEE} HZK`);
+  console.log("");
+  
   try {
     const result = await buildLeaderboard();
+    
     if (!result) {
-      console.log("No result (no data). Writing empty leaderboard to public/hzktop3.json");
-      const empty = { generatedAt: new Date().toISOString(), cluster: CLUSTER, leaderboard: { top: null, rows: [] } };
-      const out = ensurePublicAndWrite("hzktop3.json", empty);
-      console.log("Wrote", out);
+      console.log("No data found. Writing empty leaderboard.");
+      const empty = {
+        generatedAt: new Date().toISOString(),
+        cluster: CLUSTER,
+        mint: HZK_TOKEN_MINT,
+        leaderboard: { top: null, rows: [], all: [] },
+      };
+      const outPath = ensurePublicAndWrite("hzktop3.json", empty);
+      console.log(`Wrote: ${outPath}`);
       return;
     }
-    const out = ensurePublicAndWrite("hzktop3.json", result);
-    console.log("Wrote", out);
-    console.log("Top:", result.leaderboard.top);
+    
+    const outPath = ensurePublicAndWrite("hzktop3.json", result);
+    
+    console.log("");
+    console.log("=".repeat(60));
+    console.log("LEADERBOARD SUMMARY");
+    console.log("=".repeat(60));
+    console.log(`Total HZK Burned: ${result.totalBurned.toLocaleString()}`);
+    console.log(`Total Hatches: ${result.totalHatches.toLocaleString()}`);
+    console.log(`Total Players: ${result.leaderboard.all.length}`);
+    console.log("");
+    console.log("Top 3 Players:");
+    
+    const top3 = [result.leaderboard.top, ...result.leaderboard.rows].filter(Boolean);
+    top3.forEach((entry, i) => {
+      const wallet = entry.owner;
+      const shortWallet = wallet.length > 12 
+        ? `${wallet.slice(0, 6)}...${wallet.slice(-6)}`
+        : wallet;
+      console.log(`  #${i + 1}: ${shortWallet}`);
+      console.log(`      Burned: ${entry.burned.toLocaleString()} HZK`);
+      console.log(`      Hatches: ${entry.hatches}`);
+    });
+    
+    console.log("");
+    console.log(`Output: ${outPath}`);
+    console.log("=".repeat(60));
   } catch (err) {
-    console.error("Fatal error:", err?.stack ?? err);
-    const empty = { generatedAt: new Date().toISOString(), cluster: CLUSTER, leaderboard: { top: null, rows: [] } };
-    const out = ensurePublicAndWrite("hzktop3.json", empty);
-    console.log("Wrote", out);
+    console.error("Fatal error:", err);
+    const empty = {
+      generatedAt: new Date().toISOString(),
+      cluster: CLUSTER,
+      mint: HZK_TOKEN_MINT,
+      error: err.message,
+      leaderboard: { top: null, rows: [], all: [] },
+    };
+    const outPath = ensurePublicAndWrite("hzktop3.json", empty);
+    console.log(`Wrote error state: ${outPath}`);
   }
 }
 
