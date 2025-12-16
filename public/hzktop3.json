@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2025-12-16T02:23:40.665Z",
+  "generatedAt": "2025-12-16T03:46:27.726Z",
   "cluster": "mainnet-beta",
   "mint": "8zzDzPCCLd1TaEy35mwN1GJW89QEFP6ypveutcjRpump",
   "unitDecimals": 6,
-  "totalBurned": 250000,
-  "totalHatches": 50,
+  "totalBurned": 265000,
+  "totalHatches": 53,
   "leaderboard": {
     "top": {
       "owner": "3phMNWiwZH5gp2kv5RTbKSsTn6EBwC3GHmVhCn9Le54o",
@@ -46,10 +46,22 @@
         "hatches": 4
       },
       {
+        "owner": "7uJ4JvX7QwydaVNrSv7Y8ZCHSVFUJfzjgJMQw7soaXSd",
+        "totalBaseUnits": "15000000000",
+        "burned": 15000,
+        "hatches": 3
+      },
+      {
         "owner": "56RsRHvvVMa5ymZbDyET1hdxYyWNkCPNrA14LrVWW1pS",
         "totalBaseUnits": "15000000000",
         "burned": 15000,
         "hatches": 3
+      },
+      {
+        "owner": "FrZrY8oJiNhmWpRRhJQxJpQ61tNynjuL7ySa6L1WfU1T",
+        "totalBaseUnits": "10000000000",
+        "burned": 10000,
+        "hatches": 2
       },
       {
         "owner": "4GArvE9QRcy9kBESJEzQDjdQLRpjCqgHArxDjc2qRS9L",
@@ -106,12 +118,6 @@
         "hatches": 2
       },
       {
-        "owner": "7uJ4JvX7QwydaVNrSv7Y8ZCHSVFUJfzjgJMQw7soaXSd",
-        "totalBaseUnits": "5000000000",
-        "burned": 5000,
-        "hatches": 1
-      },
-      {
         "owner": "EWmBAJtZcSYki9nBdqgXUZSFroR4R9n72n1XNvY4t7nM",
         "totalBaseUnits": "5000000000",
         "burned": 5000,
@@ -137,12 +143,6 @@
       },
       {
         "owner": "6mPCfpu6sinB6Z5r4dU9stcUfwxuB1SWYAZLYMCmgi3r",
-        "totalBaseUnits": "5000000000",
-        "burned": 5000,
-        "hatches": 1
-      },
-      {
-        "owner": "FrZrY8oJiNhmWpRRhJQxJpQ61tNynjuL7ySa6L1WfU1T",
         "totalBaseUnits": "5000000000",
         "burned": 5000,
         "hatches": 1
