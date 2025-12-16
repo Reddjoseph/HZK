@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2025-12-16T07:57:28.892Z",
+  "generatedAt": "2025-12-16T08:41:22.272Z",
   "cluster": "mainnet-beta",
   "mint": "8zzDzPCCLd1TaEy35mwN1GJW89QEFP6ypveutcjRpump",
   "unitDecimals": 6,
-  "totalBurned": 295000,
-  "totalHatches": 59,
+  "totalBurned": 300000,
+  "totalHatches": 60,
   "leaderboard": {
     "top": {
       "owner": "9hGqnnRCFx5T72avhMv22Y3siJWjF56QRUUBGqXsJ1Ys",
@@ -128,6 +128,12 @@
         "totalBaseUnits": "10000000000",
         "burned": 10000,
         "hatches": 2
+      },
+      {
+        "owner": "8Gcj6V2HzXLtJFxQoGo9MXAVtCMgPQFueQxynyYxeS7t",
+        "totalBaseUnits": "5000000000",
+        "burned": 5000,
+        "hatches": 1
       },
       {
         "owner": "EWmBAJtZcSYki9nBdqgXUZSFroR4R9n72n1XNvY4t7nM",
